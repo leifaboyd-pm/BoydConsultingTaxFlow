@@ -6,60 +6,87 @@
 <title>Ledger — Boyd Business Expense OS</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNjQgNjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsPSJCb3lkIGZhbWlseSBzZWFsIj48Y2lyY2xlIGN4PSIzMiIgY3k9IjMyIiByPSIzMCIgZmlsbD0iIzBFMkE0NyIvPjxjaXJjbGUgY3g9IjMyIiBjeT0iMzIiIHI9IjI3IiBmaWxsPSJub25lIiBzdHJva2U9IiNENEE5M0MiIHN0cm9rZS13aWR0aD0iMC43NSIvPjxjaXJjbGUgY3g9IjMyIiBjeT0iMzIiIHI9IjIzIiBmaWxsPSJub25lIiBzdHJva2U9IiNENEE5M0MiIHN0cm9rZS13aWR0aD0iMC41IiBvcGFjaXR5PSIwLjYiLz48cGF0aCBkPSJNMjIgMjAgSDM4IEM0MiAyMCA0NC41IDIyLjUgNDQuNSAyNiBDNDQuNSAyOC41IDQzIDMwLjUgNDEgMzEgQzQzLjUgMzEuNSA0NiAzNCA0NiAzNy41IEM0NiA0MS41IDQzIDQ0LjUgMzkgNDQuNSBIMjIgWiIgZmlsbD0iI0Q0QTkzQyIvPjxwYXRoIGQ9Ik0yNyAyNCBWMjguNSBIMzYgQzM3LjUgMjguNSAzOC41IDI3LjUgMzguNSAyNiBDMzguNSAyNC41IDM3LjUgMjQgMzYgMjQgWiIgZmlsbD0iIzBFMkE0NyIvPjxwYXRoIGQ9Ik0yNyAzMyBWNDAuNSBIMzggQzM5LjUgNDAuNSA0MSAzOSA0MSAzNy41IEM0MSAzNiAzOS41IDMzIDM4IDMzIFoiIGZpbGw9IiMwRTJBNDciLz48Y2lyY2xlIGN4PSIxNCIgY3k9IjMyIiByPSIxIiBmaWxsPSIjRDRBOTNDIi8+PGNpcmNsZSBjeD0iNTAiIGN5PSIzMiIgcj0iMSIgZmlsbD0iI0Q0QTkzQyIvPjwvc3ZnPgo=">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNjQgNjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsPSJCb3lkIENvbnN1bHRpbmcgR3JvdXAiPjxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgcng9IjE5IiBmaWxsPSIjMTYxODFEIi8+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIsLTAuMjUpIj48cGF0aCBkPSJNMjIgMjAgSDM4IEM0MiAyMCA0NC41IDIyLjUgNDQuNSAyNiBDNDQuNSAyOC41IDQzIDMwLjUgNDEgMzEgQzQzLjUgMzEuNSA0NiAzNCA0NiAzNy41IEM0NiA0MS41IDQzIDQ0LjUgMzkgNDQuNSBIMjIgWiIgZmlsbD0iI0UzQUM1NSIvPjxwYXRoIGQ9Ik0yNyAyNCBWMjguNSBIMzYgQzM3LjUgMjguNSAzOC41IDI3LjUgMzguNSAyNiBDMzguNSAyNC41IDM3LjUgMjQgMzYgMjQgWiIgZmlsbD0iIzE2MTgxRCIvPjxwYXRoIGQ9Ik0yNyAzMyBWNDAuNSBIMzggQzM5LjUgNDAuNSA0MSAzOSA0MSAzNy41IEM0MSAzNiAzOS41IDMzIDM4IDMzIFoiIGZpbGw9IiMxNjE4MUQiLz48L2c+PC9zdmc+Cg==">
 <style>
 /* =========================================================
    DESIGN TOKENS — Boyd Consulting Group brand
    ========================================================= */
 :root{
-  /* Surfaces — light main, navy sidebar, restrained warmth */
+  /* ===================================================================
+     BOYD CONSULTING GROUP — BRAND SYSTEM 2.0 (Refresh 2026)
+     Ink and paper carry 90% of every layout. Gold is the accent of
+     record — headlines, notch, one CTA per screen. Blue and sage are
+     supporting only: data, tags, illustration.
+     =================================================================== */
+
+  /* --- Core brand (from guide §09) --- */
+  --ink:          #16181D;        /* Ink */
+  --paper:        #FAF8F4;        /* Paper */
+  --signal-gold:  #E3AC55;        /* Signal Gold */
+  --deep-gold:    #C98A2B;        /* Deep Gold */
+  --depth-blue:   #3B5BB5;        /* Depth Blue — supporting */
+  --sky:          #7E9AE8;        /* Sky — supporting */
+  --sage:         #6FBDAE;        /* Sage — supporting */
+  --warm-line:    #EDE8E0;        /* Warm Line */
+
+  /* --- Surfaces --- */
   --bg:           #FFFFFF;
-  --bg-alt:       #F7F7F8;
+  --bg-alt:       #FAF8F4;        /* paper */
   --card:         #FFFFFF;
-  --card-2:       #FAFAFB;
-  --border:       #E5E7EB;        /* brand light gray */
-  --border-2:     #D1D5DB;
+  --card-2:       #FCFBF8;
+  --border:       #EDE8E0;        /* warm line */
+  --border-2:     #DDD6CA;        /* warm line, one step down */
 
-  /* Type — high contrast, executive */
-  --ink:          #0A0A0A;        /* brand jet black */
-  --ink-2:        #1F2937;
-  --ink-3:        #6B7280;        /* brand slate */
-  --ink-4:        #9CA3AF;
+  /* --- Type ramp, derived from ink --- */
+  --ink-2:        #3A3D44;
+  --ink-3:        #74777E;
+  --ink-4:        #A3A6AC;
 
-  /* Brand palette */
-  --navy:         #0E2A47;        /* deep navy from monogram */
-  --navy-2:       #16395E;
-  --gold:         #D4AF37;        /* brand gold */
-  --gold-2:       #B8932E;
-  --gold-soft:    #FAF3DD;
-  --steel:        #3B82F6;        /* brand steel blue (links/info) */
+  /* --- Named brand aliases --- */
+  --gold:         #E3AC55;
+  --gold-2:       #C98A2B;
+  --gold-soft:    #FBF1E0;
+  --steel:        #3B5BB5;        /* depth blue */
+  --sage-soft:    #E6F4F1;
+  --blue-soft:    #EAEFFB;
 
-  /* Mapped to legacy variables so unconverted screens still work */
-  --accent:       #0E2A47;
-  --accent-2:     #16395E;
-  --accent-soft:  #EAF1F9;
-  --warn:         #D4AF37;
-  --warn-bg:      #FAF3DD;
-  --danger:       #B91C1C;
-  --danger-bg:    #FEE2E2;
-  --neutral:      #6B7280;
-  --neutral-bg:   #F3F4F6;
-  --info:         #3B82F6;
-  --info-bg:      #EFF6FF;
+  /* --- Legacy variable bridge -----------------------------------------
+     Screens written against the 1.0 tokens still resolve. `--navy` now
+     points at Ink so any unconverted surface picks up the new dark
+     rather than the retired #16181D.
+     ------------------------------------------------------------------- */
+  --navy:         #16181D;
+  --navy-2:       #24272E;
+  --accent:       #16181D;
+  --accent-2:     #3B5BB5;
+  --accent-soft:  #EAEFFB;
+  --warn:         #C98A2B;
+  --warn-bg:      #FBF1E0;
+  --danger:       #B4453C;
+  --danger-bg:    #FBEBE9;
+  --success:      #6FBDAE;
+  --neutral:      #74777E;
+  --neutral-bg:   #F3F1EC;
+  --info:         #3B5BB5;
+  --info-bg:      #EAEFFB;
 
-  --shadow-sm:    0 1px 2px rgba(10,10,10,0.04);
-  --shadow-md:    0 4px 12px rgba(10,10,10,0.06);
-  --shadow-lg:    0 12px 28px rgba(10,10,10,0.10);
+  --shadow-sm:    0 1px 2px rgba(22,24,29,0.04);
+  --shadow-md:    0 4px 14px rgba(22,24,29,0.07);
+  --shadow-lg:    0 14px 34px rgba(22,24,29,0.11);
 
-  /* Sharper geometry to match brand's architectural feel */
-  --radius-sm:    4px;
-  --radius:       6px;
-  --radius-lg:    10px;
+  /* --- Geometry — "corners always softened to 18px" (guide §11).
+     Scaled down for dense controls so checkboxes don't become pills;
+     cards and panels get the full 18. --- */
+  --radius-sm:    8px;
+  --radius:       12px;
+  --radius-lg:    18px;
 
-  --serif:        'Montserrat', 'Helvetica Neue', sans-serif; /* legacy alias */
-  --sans:         'Montserrat', 'Helvetica Neue', sans-serif;
-  --mono:         'IBM Plex Mono', ui-monospace, monospace;
+  /* --- Typography (guide §10) --- */
+  --display:      'Sora', 'Helvetica Neue', sans-serif;   /* 300 / 600 */
+  --sans:         'DM Sans', 'Helvetica Neue', sans-serif; /* 400 / 500 */
+  --serif:        'Sora', 'Helvetica Neue', sans-serif;    /* legacy alias */
+  --mono:         'DM Mono', ui-monospace, monospace;      /* tabular figures */
 }
 
 *,*::before,*::after{box-sizing:border-box;}
@@ -86,58 +113,69 @@ table{border-collapse:collapse;width:100%;}
 
 /* ----- Sidebar — Boyd Consulting Group dark navy ----- */
 .sidebar{
-  background:var(--navy);
+  background:var(--ink);
   border-right:none;
   padding:32px 18px 24px;
   display:flex;flex-direction:column;
   position:sticky;top:0;height:100vh;
-  color:#E5E7EB;
+  color:#D8D5CF;
 }
 .brand{
   display:flex;flex-direction:column;align-items:flex-start;gap:6px;
   margin-bottom:36px;padding:0 6px;
 }
-.brand-row{display:flex;align-items:center;gap:10px;}
+.brand-row{display:flex;align-items:center;gap:11px;}
 .brand-mark{
-  font-family:var(--sans);
-  font-weight:800;
-  font-size:24px;
-  letter-spacing:0.04em;
-  color:#FFFFFF;
-  position:relative;
-}
-.brand-mark::after{
-  content:'';
-  position:absolute;left:0;right:0;bottom:-3px;height:2px;
-  background:var(--gold);
-}
-.brand-seal{width:28px;height:28px;flex-shrink:0;}
-.brand-sub{
-  font-size:9px;
-  letter-spacing:0.22em;
-  text-transform:uppercase;
-  color:var(--gold);
+  font-family:var(--display);
   font-weight:600;
-  margin-top:8px;
+  font-size:25px;
+  letter-spacing:0.07em;
+  color:var(--paper);
+  position:relative;
+  line-height:1;
+}
+/* Gold notch over the Y — the one piece of the lockup that must survive
+   every reduction. Guide §07. */
+.brand-y{position:relative;}
+.brand-y::before{
+  content:'';
+  position:absolute;
+  top:-0.34em;left:50%;
+  transform:translateX(-50%);
+  width:0;height:0;
+  border-left:0.2em solid transparent;
+  border-right:0.2em solid transparent;
+  border-top:0.19em solid var(--signal-gold);
+}
+.brand-seal{width:30px;height:30px;flex-shrink:0;}
+.brand-sub{
+  font-family:var(--sans);
+  font-size:8.5px;
+  letter-spacing:0.26em;
+  text-transform:uppercase;
+  color:var(--signal-gold);
+  font-weight:500;
+  margin-top:9px;
 }
 .brand-tagline{
+  font-family:var(--sans);
   font-size:9.5px;
-  letter-spacing:0.05em;
-  color:#9CA3AF;
+  letter-spacing:0.04em;
+  color:#8A8D94;
   font-weight:400;
-  margin-top:2px;
+  margin-top:3px;
   font-style:normal;
 }
 .nav-section{margin-bottom:22px;}
 .nav-label{
   font-size:10px;letter-spacing:0.18em;text-transform:uppercase;
-  color:#6B7280;font-weight:600;
+  color:#74777E;font-weight:600;
   padding:0 10px;margin-bottom:8px;
 }
 .nav-item{
   display:flex;align-items:center;gap:10px;
   padding:9px 10px;border-radius:var(--radius-sm);
-  color:#D1D5DB;font-size:13.5px;font-weight:500;
+  color:#DDD6CA;font-size:13.5px;font-weight:500;
   cursor:pointer;width:100%;text-align:left;
   background:transparent;border:none;
   transition:background 0.12s, color 0.12s, border-color 0.12s;
@@ -162,7 +200,7 @@ table{border-collapse:collapse;width:100%;}
 .sidebar-foot{
   margin-top:auto;
   padding-top:16px;border-top:1px solid rgba(255,255,255,0.08);
-  font-size:10.5px;color:#9CA3AF;
+  font-size:10.5px;color:#A3A6AC;
   display:flex;align-items:center;gap:8px;
   letter-spacing:0.02em;
 }
@@ -220,14 +258,14 @@ table{border-collapse:collapse;width:100%;}
 }
 .btn:hover{border-color:var(--navy);background:var(--card);}
 .btn-primary{background:var(--navy);color:#FFFFFF;border-color:var(--navy);font-weight:600;}
-.btn-primary:hover{background:#08203A;border-color:#08203A;color:#FFFFFF;}
+.btn-primary:hover{background:#0E1013;border-color:#0E1013;color:#FFFFFF;}
 .btn-gold{background:var(--gold);color:var(--navy);border-color:var(--gold);font-weight:700;}
 .btn-gold:hover{background:var(--gold-2);border-color:var(--gold-2);color:var(--navy);}
 .btn-ghost{border-color:transparent;background:transparent;}
 .btn-ghost:hover{background:var(--bg-alt);border-color:transparent;}
 .btn-sm{padding:5px 10px;font-size:11.5px;}
 .btn-danger{background:var(--danger);color:#fff;border-color:var(--danger);}
-.btn-danger:hover{background:#991B1B;border-color:#991B1B;color:#fff;}
+.btn-danger:hover{background:#96382F;border-color:#96382F;color:#fff;}
 
 .view{padding:32px 36px 80px;max-width:1480px;}
 @media(max-width:920px){
@@ -248,7 +286,7 @@ table{border-collapse:collapse;width:100%;}
 .card{
   background:var(--card);
   border:1px solid var(--border);
-  border-radius:var(--radius);
+  border-radius:var(--radius-lg);   /* 18px — guide §11 */
   padding:22px;
   box-shadow:var(--shadow-sm);
 }
@@ -257,8 +295,8 @@ table{border-collapse:collapse;width:100%;}
   margin-bottom:14px;
 }
 .card-title{
-  font-family:var(--sans);
-  font-size:15px;font-weight:700;
+  font-family:var(--display);
+  font-size:15px;font-weight:600;
   letter-spacing:-0.005em;
   color:var(--ink);
 }
@@ -275,8 +313,8 @@ table{border-collapse:collapse;width:100%;}
 .kpi{display:flex;flex-direction:column;gap:8px;}
 .kpi-label{font-size:10.5px;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-3);font-weight:600;}
 .kpi-value{
-  font-family:var(--sans);
-  font-size:36px;font-weight:700;
+  font-family:var(--display);
+  font-size:36px;font-weight:600;
   letter-spacing:-0.02em;
   line-height:1.05;
   font-variant-numeric:tabular-nums;
@@ -302,7 +340,7 @@ table{border-collapse:collapse;width:100%;}
 
 /* ----- Brand hero band — Boyd Consulting Group ----- */
 .brand-hero{
-  background:linear-gradient(135deg, var(--navy) 0%, #08203A 100%);
+  background:linear-gradient(135deg, var(--navy) 0%, #0E1013 100%);
   color:#FFFFFF;
   border-radius:var(--radius);
   padding:32px 36px;
@@ -329,8 +367,8 @@ table{border-collapse:collapse;width:100%;}
   margin-bottom:8px;
 }
 .brand-hero-title{
-  font-family:var(--sans);
-  font-size:38px;font-weight:800;
+  font-family:var(--display);
+  font-size:38px;font-weight:600;
   letter-spacing:-0.02em;line-height:1;
   color:#FFFFFF;
   position:relative;
@@ -345,7 +383,7 @@ table{border-collapse:collapse;width:100%;}
 .brand-hero-tagline{
   margin-top:14px;
   font-size:11.5px;letter-spacing:0.04em;
-  color:#9CA3AF;font-weight:500;
+  color:#A3A6AC;font-weight:500;
 }
 .brand-hero-meta{
   display:flex;gap:32px;
@@ -354,7 +392,7 @@ table{border-collapse:collapse;width:100%;}
 .brand-hero-stat{display:flex;flex-direction:column;gap:4px;align-items:flex-end;}
 .brand-hero-stat-label{
   font-size:10px;letter-spacing:0.18em;text-transform:uppercase;
-  color:#9CA3AF;font-weight:600;
+  color:#A3A6AC;font-weight:600;
 }
 .brand-hero-stat-val{
   font-family:var(--sans);
@@ -416,8 +454,8 @@ table{border-collapse:collapse;width:100%;}
 
 /* ----- Section title within a card — gold tick like brand guide ----- */
 .section-title{
-  font-family:var(--sans);
-  font-size:13px;font-weight:700;
+  font-family:var(--display);
+  font-size:13px;font-weight:600;
   letter-spacing:0.04em;text-transform:uppercase;
   color:var(--ink);
   position:relative;
@@ -497,7 +535,7 @@ table{border-collapse:collapse;width:100%;}
   text-transform:uppercase;
 }
 .chip-green{background:var(--accent-soft);color:var(--accent);}
-.chip-yellow{background:var(--warn-bg);color:#7d5b1a;}
+.chip-yellow{background:var(--warn-bg);color:#8A5F1D;}
 .chip-red{background:var(--danger-bg);color:var(--danger);}
 .chip-gray{background:var(--neutral-bg);color:var(--ink-2);}
 .chip-blue{background:var(--info-bg);color:var(--info);}
@@ -564,7 +602,7 @@ table{border-collapse:collapse;width:100%;}
 .mapping-warn > div + div{margin-top:6px;}
 .progress-track{height:8px;background:var(--border);border-radius:99px;overflow:hidden;}
 .progress-fill{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent-2));transition:width 0.3s ease;border-radius:99px;}
-.ai-banner{background:linear-gradient(135deg,#F4F0E8 0%,#EAE5D6 100%);border:1px solid var(--border-2);border-radius:var(--radius);padding:14px 18px;margin-bottom:20px;display:flex;justify-content:space-between;align-items:center;gap:16px;}
+.ai-banner{background:linear-gradient(135deg,#FAF8F4 0%,#EDE8E0 100%);border:1px solid var(--border-2);border-radius:var(--radius);padding:14px 18px;margin-bottom:20px;display:flex;justify-content:space-between;align-items:center;gap:16px;}
 .ai-banner-text{font-size:13px;color:var(--ink-2);line-height:1.5;}
 .ai-banner-text strong{color:var(--ink);font-weight:600;}
 .radios{display:flex;flex-direction:column;gap:8px;}
@@ -774,7 +812,7 @@ table{border-collapse:collapse;width:100%;}
   background:var(--gold);
 }
 .report-title{
-  font-family:var(--sans);font-size:30px;font-weight:800;
+  font-family:var(--sans);font-size:30px;font-weight:600;
   letter-spacing:-0.02em;line-height:1.1;
   color:var(--ink);
   margin-top:6px;
@@ -838,7 +876,7 @@ table{border-collapse:collapse;width:100%;}
   line-height:1.15;
 }
 .report-letterhead-name{
-  font-family:var(--sans);font-size:18px;font-weight:800;
+  font-family:var(--sans);font-size:18px;font-weight:600;
   letter-spacing:0.04em;color:var(--navy);
   position:relative;display:inline-block;padding-bottom:2px;
 }
@@ -931,7 +969,7 @@ hr.sep{border:none;border-top:1px solid var(--border);margin:18px 0;}
 .expmod .em-stat-value {
   font-family: var(--sans);
   font-size: 20px;
-  font-weight: 800;
+  font-weight:600;
   color: var(--navy);
   letter-spacing: -0.01em;
   font-variant-numeric: tabular-nums;
@@ -1037,7 +1075,7 @@ hr.sep{border:none;border-top:1px solid var(--border);margin:18px 0;}
 .expmod .em-tbl .num { text-align: right; }
 .expmod .em-badge-ai { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 10.5px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; background: rgba(59,106,191,0.10); color: var(--steel); }
 .expmod .em-badge-rule { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 10.5px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; background: rgba(212,175,55,0.15); color: var(--accent-2); }
-.expmod .em-badge-user { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 10.5px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; background: rgba(5,150,105,0.10); color: var(--success, #059669); }
+.expmod .em-badge-user { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 10.5px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; background: rgba(5,150,105,0.10); color: var(--success, #4F9E8E); }
 .expmod .em-badge-unknown { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 10.5px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; background: var(--bg-alt); color: var(--ink-3); }
 .expmod .em-print-only { display: none; }
 @media print {
@@ -1055,20 +1093,17 @@ hr.sep{border:none;border-top:1px solid var(--border);margin:18px 0;}
 <aside class="sidebar">
   <div class="brand">
     <div class="brand-row">
-      <svg class="brand-seal" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-label="Boyd Consulting Group seal">
-        <circle cx="32" cy="32" r="30" fill="#0E2A47"/>
-        <circle cx="32" cy="32" r="27" fill="none" stroke="#D4AF37" stroke-width="0.75"/>
-        <circle cx="32" cy="32" r="23" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.6"/>
-        <path d="M22 20 H38 C42 20 44.5 22.5 44.5 26 C44.5 28.5 43 30.5 41 31 C43.5 31.5 46 34 46 37.5 C46 41.5 43 44.5 39 44.5 H22 Z" fill="#D4AF37"/>
-        <path d="M27 24 V28.5 H36 C37.5 28.5 38.5 27.5 38.5 26 C38.5 24.5 37.5 24 36 24 Z" fill="#0E2A47"/>
-        <path d="M27 33 V40.5 H38 C39.5 40.5 41 39 41 37.5 C41 36 39.5 33 38 33 Z" fill="#0E2A47"/>
-        <circle cx="14" cy="32" r="1" fill="#D4AF37"/>
-        <circle cx="50" cy="32" r="1" fill="#D4AF37"/>
+      <!-- BCG monogram, paper/ink colorway (guide §07–08) -->
+      <svg class="brand-seal" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-label="Boyd Consulting Group monogram">
+        <rect width="64" height="64" rx="19" fill="var(--paper)"/>
+        <text x="32" y="32" text-anchor="middle" dominant-baseline="central"
+              font-family="Sora, Helvetica Neue, sans-serif" font-size="20" font-weight="600"
+              letter-spacing="-0.5" fill="var(--ink)">BC<tspan fill="var(--signal-gold)">G</tspan></text>
       </svg>
-      <div class="brand-mark">BOYD</div>
+      <div class="brand-mark">BO<span class="brand-y">Y</span>D</div>
     </div>
     <div class="brand-sub">Consulting Group</div>
-    <div class="brand-tagline">Strategy. People. Performance.</div>
+    <div class="brand-tagline">People. Strategy. Performance.</div>
   </div>
 
   <div class="nav-section">
@@ -1423,32 +1458,38 @@ const Store = (() => {
 /* =========================================================================
    CATEGORIES — practical business expense taxonomy
    ========================================================================= */
+/* Swatch palette is derived from the Brand 2.0 supporting colours (guide §09:
+   "Blue and sage are supporting only: data, tags, illustration"). Families:
+     sage  = money in
+     blue  = operations
+     gold  = growth, hospitality, attention
+     warm  = neutral / out of scope                                        */
 const CATEGORIES = [
-  // Income categories (positive amounts)
-  { id:'income_commission',  name:'Income — Commission',     deductible:'income', color:'#1F3A2E', kind:'income' },
-  { id:'income_fee',         name:'Income — Fee',            deductible:'income', color:'#2D5F4A', kind:'income' },
-  { id:'income_other',       name:'Income — Other',          deductible:'income', color:'#4A6FA5', kind:'income' },
-  { id:'refund',             name:'Refund / Credit',         deductible:'income', color:'#7C8BB8', kind:'income' },
+  // Income categories (positive amounts) — sage family
+  { id:'income_commission',  name:'Income — Commission',     deductible:'income', color:'#52A697', kind:'income' },
+  { id:'income_fee',         name:'Income — Fee',            deductible:'income', color:'#6FBDAE', kind:'income' },
+  { id:'income_other',       name:'Income — Other',          deductible:'income', color:'#8ECEC2', kind:'income' },
+  { id:'refund',             name:'Refund / Credit',         deductible:'income', color:'#A8DCD3', kind:'income' },
   // Expense categories
-  { id:'meals',          name:'Business Meals',        deductible:'partial', color:'#1F3A2E' },
-  { id:'travel',         name:'Travel',                deductible:'full',    color:'#2D5F4A' },
-  { id:'lodging',        name:'Lodging',               deductible:'full',    color:'#4A6FA5' },
-  { id:'transportation', name:'Transportation',        deductible:'full',    color:'#7C8BB8' },
-  { id:'office',         name:'Office Supplies',       deductible:'full',    color:'#B8862F' },
-  { id:'software',       name:'Software / Subscriptions', deductible:'full', color:'#8B6F4A' },
-  { id:'marketing',      name:'Marketing / Advertising', deductible:'full',  color:'#A03830' },
-  { id:'professional',   name:'Professional Services', deductible:'full',    color:'#5A4A6F' },
-  { id:'payroll',        name:'Payroll / Contractors', deductible:'full',    color:'#3F5A8A' },
-  { id:'insurance',      name:'Insurance',             deductible:'full',    color:'#6B6660' },
-  { id:'fees',           name:'Bank Fees',             deductible:'full',    color:'#8A847C' },
-  { id:'education',      name:'Education / Coaching',  deductible:'full',    color:'#7C6F8A' },
-  { id:'gifts',          name:'Client Gifts',          deductible:'limited', color:'#B07A9C' },
-  { id:'utilities',      name:'Utilities / Phone / Internet', deductible:'full', color:'#5C8A6B' },
-  { id:'vehicle',        name:'Vehicle / Mileage',     deductible:'review',  color:'#A89060' },
-  { id:'uncategorized',  name:'Uncategorized',         deductible:'no',      color:'#C4BBA8' },
-  { id:'personal',       name:'Personal / Do Not Expense', deductible:'no',  color:'#8A847C' },
-  { id:'review',         name:'Review Required',       deductible:'review',  color:'#B8862F' },
-  { id:'excluded',       name:'Excluded (Transfer/Draw/CC Pmt)', deductible:'no', color:'#B8B1A4' },
+  { id:'meals',          name:'Business Meals',        deductible:'partial', color:'#C98A2B' },
+  { id:'travel',         name:'Travel',                deductible:'full',    color:'#3B5BB5' },
+  { id:'lodging',        name:'Lodging',               deductible:'full',    color:'#5B78C7' },
+  { id:'transportation', name:'Transportation',        deductible:'full',    color:'#7E9AE8' },
+  { id:'office',         name:'Office Supplies',       deductible:'full',    color:'#9AAFEC' },
+  { id:'software',       name:'Software / Subscriptions', deductible:'full', color:'#4C6BC4' },
+  { id:'marketing',      name:'Marketing / Advertising', deductible:'full',  color:'#E3AC55' },
+  { id:'professional',   name:'Professional Services', deductible:'full',    color:'#6B5BB5' },
+  { id:'payroll',        name:'Payroll / Contractors', deductible:'full',    color:'#2F4A9A' },
+  { id:'insurance',      name:'Insurance',             deductible:'full',    color:'#6E7A99' },
+  { id:'fees',           name:'Bank Fees',             deductible:'full',    color:'#8A8FA0' },
+  { id:'education',      name:'Education / Coaching',  deductible:'full',    color:'#8B7BC7' },
+  { id:'gifts',          name:'Client Gifts',          deductible:'limited', color:'#D4A0B8' },
+  { id:'utilities',      name:'Utilities / Phone / Internet', deductible:'full', color:'#5FA89B' },
+  { id:'vehicle',        name:'Vehicle / Mileage',     deductible:'review',  color:'#B8923F' },
+  { id:'uncategorized',  name:'Uncategorized',         deductible:'no',      color:'#C4BDB0' },
+  { id:'personal',       name:'Personal / Do Not Expense', deductible:'no',  color:'#A3A6AC' },
+  { id:'review',         name:'Review Required',       deductible:'review',  color:'#C98A2B' },
+  { id:'excluded',       name:'Excluded (Transfer/Draw/CC Pmt)', deductible:'no', color:'#DDD6CA' },
 ];
 const CAT_BY_ID = Object.fromEntries(CATEGORIES.map(c => [c.id, c]));
 
@@ -2716,7 +2757,7 @@ const Store = {
   },
   remove(key) { try { localStorage.removeItem(key); } catch {} },
   wipe() {
-    for (const k of ['exp.transactions','exp.rules','exp.business_purposes','exp.settings','exp.current_step']) {
+    for (const k of ['exp.transactions','exp.rules','exp.business_purposes','exp.settings','exp.current_step','exp.date_range','exp.filters']) {
       this.remove(k);
     }
   }
@@ -2764,14 +2805,34 @@ const DEFAULT_SETTINGS = {
 };
 
 const state = {
-  transactions: [],        // Array of transaction objects
+  transactions: [],        // Rebuilt on every render from Tax OS ledger + txMeta overlay
+  txMeta: {},              // Side map: { txId → { business_purpose, included, note } }
   rules: [],               // Array of rule objects
   businessPurposes: [],    // List of known business purposes (for autocomplete)
   settings: { ...DEFAULT_SETTINGS },
-  currentStep: 'upload',   // 'upload' | 'review' | 'export'
-  filter: 'all',           // 'all' | 'untagged' | 'tagged' | 'included' | 'low_conf'
+  currentStep: 'review',   // Skip upload — we read from Tax OS ledger. 'review' | 'export'
+  filter: 'all',           // Legacy quick-filter chip: 'all' | 'untagged' | 'tagged' | 'included' | 'low_conf'
   expandedTxId: null,      // ID of row currently expanded for tagging
   demoMode: false,         // true when "Demo AI" was used (just for UI state)
+  // Date range for the current report — the primary filter for the report.
+  // Persisted to localStorage so it survives across sessions.
+  dateRange: {
+    from: '',              // ISO date 'YYYY-MM-DD' or '' for no start bound
+    to: '',                // ISO date or '' for no end bound
+    preset: 'ytd',         // 'this_month' | 'last_month' | 'this_quarter' | 'ytd' | 'all_time' | 'custom'
+  },
+  // Multi-value filters. All AND together. Empty array = no restriction on that axis.
+  // Filters are display lenses; they do NOT modify the underlying `included` flag.
+  filters: {
+    categories: [],        // Array of tax_category ids (e.g. ['software', 'meals_50'])
+    purposes: [],          // Array of exact business_purpose strings
+    sources: [],           // Array of 'ai' | 'rule' | 'user' | 'unknown'
+    merchantQuery: '',     // Substring match, case-insensitive
+    amountMin: null,       // Number or null
+    amountMax: null,       // Number or null
+    minConfidence: null,   // 0-1 or null
+  },
+  filterPanelOpen: false,  // UI state — is the filter panel expanded
 };
 
 /* =========================================================================
@@ -2817,6 +2878,334 @@ const fmt = {
   },
 };
 
+/* =========================================================================
+   DATE RANGE HELPERS
+   Convert preset labels to actual date ranges, and vice versa.
+   ========================================================================= */
+function isoToday() {
+  const d = new Date();
+  return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+}
+function isoDate(y, m, d) {
+  return `${y}-${String(m).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+}
+
+/**
+ * Compute the from/to dates for a named preset. Returns { from, to } as ISO strings.
+ * 'all_time' returns empty strings (meaning no bound).
+ */
+function computeDateRangeFromPreset(preset) {
+  const today = new Date();
+  const y = today.getFullYear();
+  const m = today.getMonth() + 1;  // 1-12
+  const d = today.getDate();
+
+  switch (preset) {
+    case 'this_month': {
+      return { from: isoDate(y, m, 1), to: isoToday() };
+    }
+    case 'last_month': {
+      const lastM = m === 1 ? 12 : m - 1;
+      const lastY = m === 1 ? y - 1 : y;
+      const lastDay = new Date(lastY, lastM, 0).getDate();  // day 0 of next = last of prev
+      return { from: isoDate(lastY, lastM, 1), to: isoDate(lastY, lastM, lastDay) };
+    }
+    case 'this_quarter': {
+      const qStartMonth = Math.floor((m - 1) / 3) * 3 + 1;  // Jan/Apr/Jul/Oct
+      return { from: isoDate(y, qStartMonth, 1), to: isoToday() };
+    }
+    case 'ytd': {
+      return { from: isoDate(y, 1, 1), to: isoToday() };
+    }
+    case 'all_time': {
+      return { from: '', to: '' };
+    }
+    default:
+      return null;  // 'custom' — don't override
+  }
+}
+
+/**
+ * Check whether a transaction date falls within the current date range.
+ * An empty from/to means unbounded on that side.
+ */
+function txInDateRange(tx, range) {
+  if (!range) return true;
+  const { from, to } = range;
+  const txDate = tx.date || '';
+  if (!txDate) return false;  // no date → excluded from any range
+  if (from && txDate < from) return false;
+  if (to && txDate > to) return false;
+  return true;
+}
+
+/**
+ * Human-readable label for the current date range, used in period label
+ * auto-generation and UI.
+ */
+function dateRangeLabel(range) {
+  if (!range || (!range.from && !range.to)) return 'All time';
+  if (range.from && range.to) return `${fmt.dateShort(range.from)} – ${fmt.dateShort(range.to)}`;
+  if (range.from) return `From ${fmt.dateShort(range.from)}`;
+  if (range.to) return `Through ${fmt.dateShort(range.to)}`;
+  return '';
+}
+
+/* =========================================================================
+   FILTER HELPERS
+   Non-destructive lenses over the transactions list. Filters combine with AND;
+   within a multi-value filter, values combine with OR (any-match).
+
+   Design principle: filters are display state only. They never change the
+   underlying `included` flag, `tax_category`, or any other transaction field.
+   ========================================================================= */
+
+/* =========================================================================
+   TAX OS LEDGER ADAPTER
+   The Expense Reports module is a LENS over Tax OS's transaction ledger,
+   not a separate database. This adapter:
+
+     1. Reads Tax OS transactions from ctx.taxOSState.transactions
+     2. Maps Tax OS category IDs to the module's tax_category IDs
+     3. Overlays per-transaction expense metadata (business_purpose,
+        included flag, notes) stored in state.txMeta, keyed by tx id
+     4. Returns a merged view — Tax OS core fields + module metadata
+
+   Tax OS transactions are NEVER mutated by the module. If the user tags
+   a business_purpose, it goes in the side map. If they mark a transaction
+   included in the report, that also goes in the side map.
+
+   This means: change category in Tax OS → shows up in Expense Reports.
+   Add business_purpose in Expense Reports → invisible to Tax OS.
+   ========================================================================= */
+
+/**
+ * Translate a Tax OS category id → module tax_category id.
+ * Tax OS uses: meals, travel, lodging, transportation, office, software,
+ *   marketing, professional, payroll, insurance, fees, education, gifts,
+ *   utilities, vehicle, uncategorized, personal, review, excluded,
+ *   income_commission, income_fee, income_other, refund.
+ * Module uses: meals_50, meals_100, marketing, travel, auto, office,
+ *   software, pro_dev, pro_services, insurance, utilities, bank_fees,
+ *   dues, gifts, other, personal.
+ */
+const TAXOS_TO_MODULE_CATEGORY = {
+  meals: 'meals_50',              // business meals → 50% deductible (default)
+  travel: 'travel',
+  lodging: 'travel',              // lodging rolls up into travel
+  transportation: 'travel',
+  office: 'office',
+  software: 'software',
+  marketing: 'marketing',
+  professional: 'pro_services',
+  payroll: 'other',               // no direct map — surface as "other"
+  insurance: 'insurance',
+  fees: 'bank_fees',
+  education: 'pro_dev',
+  gifts: 'gifts',
+  utilities: 'utilities',
+  vehicle: 'auto',
+  uncategorized: null,            // treated as untagged
+  personal: 'personal',
+  review: null,                   // needs review = untagged
+  excluded: 'personal',           // treat as personal (excluded from expense reports)
+  income_commission: null,        // income shouldn't appear on expense reports
+  income_fee: null,
+  income_other: null,
+  refund: null,
+};
+
+/**
+ * Build the transactions array the module works with, by adapting Tax OS
+ * transactions and overlaying local metadata. Called on every render so
+ * new uploads to Tax OS are immediately visible.
+ *
+ * Filters out income and unmapped types (they don't belong on expense reports).
+ */
+function buildTransactionsFromLedger(taxOSTransactions, txMeta) {
+  if (!Array.isArray(taxOSTransactions)) return [];
+  const result = [];
+  for (const src of taxOSTransactions) {
+    // Skip income and unmapped types entirely — they don't belong on expense reports
+    const mappedCat = TAXOS_TO_MODULE_CATEGORY[src.category];
+    if (mappedCat === null && src.category !== 'uncategorized' && src.category !== 'review') {
+      // Explicitly null-mapped (income, refund, excluded) = skip
+      if (['income_commission','income_fee','income_other','refund'].includes(src.category)) continue;
+    }
+
+    // Skip positive-amount rows (income). Expense reports are for expenses.
+    if (src.amount > 0) continue;
+
+    const meta = txMeta[src.id] || {};
+    result.push({
+      // Preserve id so metadata stays keyed correctly
+      id: src.id,
+      date: src.date,
+      description: src.description || '',
+      amount: src.amount,
+      merchant: src.merchant || src.description || '',
+      // Category: from Tax OS via translation. If null/untagged, tax_category is null.
+      tax_category: mappedCat,
+      // Metadata from the module's side map (persisted separately)
+      business_purpose: meta.business_purpose || '',
+      note: meta.note || '',
+      included: !!meta.included,
+      // Provenance
+      categorized_by: src.categorized_by === 'rules' ? 'rule'
+                    : src.categorized_by === 'user' ? 'user'
+                    : src.categorized_by === 'ai' ? 'ai'
+                    : (mappedCat ? 'rule' : 'unknown'),
+      confidence: typeof src.confidence === 'number' ? src.confidence : 1,
+      ai_reasoning: src.reason || '',
+      // Keep original Tax OS reference for debugging
+      _taxos_category: src.category,
+    });
+  }
+  return result;
+}
+
+/**
+ * Persist per-transaction expense metadata (business_purpose, included, note).
+ * Called after any tag / include / exclude action.
+ */
+function saveTxMeta() {
+  Store.set('exp.tx_meta', state.txMeta || {});
+}
+
+/**
+ * Read a transaction's metadata; create-on-write if missing.
+ */
+function getMeta(txId) {
+  if (!state.txMeta) state.txMeta = {};
+  if (!state.txMeta[txId]) state.txMeta[txId] = {};
+  return state.txMeta[txId];
+}
+
+/**
+ * Rebuild the module's transactions array from the Tax OS ledger, using the
+ * latest metadata. Call this whenever the underlying ledger might have
+ * changed (on every publicRender call).
+ */
+function refreshFromLedger(taxOSTransactions) {
+  if (!state.txMeta) state.txMeta = Store.get('exp.tx_meta', {}) || {};
+  state.transactions = buildTransactionsFromLedger(taxOSTransactions, state.txMeta);
+}
+
+/* =========================================================================
+   FILTER HELPERS (existing)
+   ========================================================================= */
+
+/**
+ * Apply the full filter set (date range + all axes in state.filters) to a
+ * transaction. Returns true if the transaction should be visible.
+ */
+function txPassesFilters(tx, dateRange, filters) {
+  // Date range — the primary filter
+  if (!txInDateRange(tx, dateRange)) return false;
+
+  const f = filters || {};
+
+  // Tax category multi-select
+  if (f.categories && f.categories.length > 0) {
+    if (!f.categories.includes(tx.tax_category)) return false;
+  }
+
+  // Business purpose multi-select
+  if (f.purposes && f.purposes.length > 0) {
+    if (!f.purposes.includes(tx.business_purpose)) return false;
+  }
+
+  // Categorization source
+  if (f.sources && f.sources.length > 0) {
+    if (!f.sources.includes(tx.categorized_by || 'unknown')) return false;
+  }
+
+  // Merchant substring
+  if (f.merchantQuery && f.merchantQuery.trim()) {
+    const q = f.merchantQuery.trim().toLowerCase();
+    const hay = ((tx.merchant || '') + ' ' + (tx.description || '')).toLowerCase();
+    if (!hay.includes(q)) return false;
+  }
+
+  // Amount range (absolute value — we're dealing with expenses which are negative)
+  const absAmt = Math.abs(tx.amount || 0);
+  if (f.amountMin != null && f.amountMin !== '' && absAmt < Number(f.amountMin)) return false;
+  if (f.amountMax != null && f.amountMax !== '' && absAmt > Number(f.amountMax)) return false;
+
+  // Confidence threshold
+  if (f.minConfidence != null && f.minConfidence !== '' && (tx.confidence || 0) < Number(f.minConfidence)) return false;
+
+  return true;
+}
+
+/**
+ * Count how many filter axes are actively narrowing results. Used to show
+ * the "N filters active" indicator on the toggle.
+ */
+function activeFilterCount(filters) {
+  if (!filters) return 0;
+  let n = 0;
+  if (filters.categories && filters.categories.length) n++;
+  if (filters.purposes && filters.purposes.length) n++;
+  if (filters.sources && filters.sources.length) n++;
+  if (filters.merchantQuery && filters.merchantQuery.trim()) n++;
+  if (filters.amountMin != null && filters.amountMin !== '') n++;
+  if (filters.amountMax != null && filters.amountMax !== '') n++;
+  if (filters.minConfidence != null && filters.minConfidence !== '') n++;
+  return n;
+}
+
+/**
+ * Reset all filters to default (no restrictions). Does NOT touch the date range.
+ */
+function resetFilters() {
+  state.filters = {
+    categories: [],
+    purposes: [],
+    sources: [],
+    merchantQuery: '',
+    amountMin: null,
+    amountMax: null,
+    minConfidence: null,
+  };
+}
+
+/**
+ * Human-readable summary of active filters for the pill row.
+ * Returns an array of { key, label, onRemove } for rendering.
+ */
+function activeFilterChips(filters) {
+  const chips = [];
+  if (filters.categories && filters.categories.length) {
+    const labels = filters.categories.map(id => {
+      const c = TAX_CATEGORIES.find(x => x.id === id);
+      return c ? c.label : id;
+    });
+    chips.push({ key: 'categories', label: `Category: ${labels.join(', ')}`, resetTo: [] });
+  }
+  if (filters.purposes && filters.purposes.length) {
+    chips.push({ key: 'purposes', label: `Purpose: ${filters.purposes.join(', ')}`, resetTo: [] });
+  }
+  if (filters.sources && filters.sources.length) {
+    const map = { ai: 'AI', rule: 'Rule', user: 'User', unknown: 'Untagged' };
+    chips.push({ key: 'sources', label: `Source: ${filters.sources.map(s => map[s] || s).join(', ')}`, resetTo: [] });
+  }
+  if (filters.merchantQuery && filters.merchantQuery.trim()) {
+    chips.push({ key: 'merchantQuery', label: `Merchant: "${filters.merchantQuery.trim()}"`, resetTo: '' });
+  }
+  if (filters.amountMin != null && filters.amountMin !== '') {
+    chips.push({ key: 'amountMin', label: `Min $${Number(filters.amountMin).toFixed(2)}`, resetTo: null });
+  }
+  if (filters.amountMax != null && filters.amountMax !== '') {
+    chips.push({ key: 'amountMax', label: `Max $${Number(filters.amountMax).toFixed(2)}`, resetTo: null });
+  }
+  if (filters.minConfidence != null && filters.minConfidence !== '') {
+    chips.push({ key: 'minConfidence', label: `Confidence ≥ ${(Number(filters.minConfidence)*100).toFixed(0)}%`, resetTo: null });
+  }
+  return chips;
+}
+
+
 function escapeHTML(s) {
   return String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 }
@@ -2848,6 +3237,8 @@ function save() {
   Store.set('exp.business_purposes', state.businessPurposes);
   Store.set('exp.settings', state.settings);
   Store.set('exp.current_step', state.currentStep);
+  Store.set('exp.date_range', state.dateRange);
+  Store.set('exp.filters', state.filters);
 }
 
 function setStatus(state, text) {
@@ -3216,25 +3607,21 @@ function fakeAIClassify(transactions) {
 function renderStepIndicator() {
   const root = document.getElementById('em-stepIndicator');
   const steps = [
-    { id: 'upload', num: 1, label: 'Upload' },
-    { id: 'review', num: 2, label: 'Review & retag' },
-    { id: 'export', num: 3, label: 'Export' },
+    { id: 'review', num: 1, label: 'Review & categorize' },
+    { id: 'export', num: 2, label: 'Export report' },
   ];
-  const hasTransactions = state.transactions.length > 0;
   const currentIdx = steps.findIndex(s => s.id === state.currentStep);
 
-  root.innerHTML = steps.map((s, i) => {
-    let cls = 'step';
+  root.innerHTML = `<div class="em-steps">` + steps.map((s, i) => {
+    let cls = 'em-step';
     if (s.id === state.currentStep) cls += ' active';
     else if (i < currentIdx) cls += ' done';
-    if (i > 0 && !hasTransactions) cls += ' step-disabled';
     return `<button class="${cls}" data-step="${s.id}"><div class="em-step-num">${s.num}</div>${s.label}</button>`;
-  }).join('');
+  }).join('') + `</div>`;
 
   root.querySelectorAll('[data-step]').forEach(btn => {
     btn.onclick = () => {
       const step = btn.dataset.step;
-      if (step !== 'upload' && state.transactions.length === 0) return;
       state.currentStep = step;
       save();
       render();
@@ -3245,8 +3632,9 @@ function renderStepIndicator() {
 function render() {
   renderStepIndicator();
   const root = document.getElementById('em-viewContainer');
-  if (state.currentStep === 'upload') renderUpload(root);
-  else if (state.currentStep === 'review') renderReview(root);
+  // No more upload step — always start on review
+  if (state.currentStep === 'upload') state.currentStep = 'review';
+  if (state.currentStep === 'review') renderReview(root);
   else if (state.currentStep === 'export') renderExport(root);
 }
 
@@ -3352,8 +3740,26 @@ function ingestText(text, sourceLabel = 'pasted') {
   // Append; rule-match immediately for new ones
   state.transactions.push(...newTxns);
   const matched = applyRulesToAll();
+
+  // Auto-include newly uploaded transactions that fall within the current date range.
+  // This is the fix for "I uploaded new transactions but they're not on my report":
+  // if you're actively building a report for a given period and you upload
+  // transactions from that period, they belong in that report by default.
+  let autoIncluded = 0;
+  if (state.dateRange && (state.dateRange.from || state.dateRange.to)) {
+    for (const tx of newTxns) {
+      if (txInDateRange(tx, state.dateRange)) {
+        tx.included = true;
+        autoIncluded++;
+      }
+    }
+  }
+
   save();
-  toast(`Loaded ${newTxns.length} transactions. ${matched} matched existing rules.`);
+  const parts = [`Loaded ${newTxns.length} transactions`];
+  if (matched) parts.push(`${matched} matched existing rules`);
+  if (autoIncluded) parts.push(`${autoIncluded} auto-included in current date range`);
+  toast(parts.join('. ') + '.');
   state.currentStep = 'review';
   save();
   render();
@@ -3392,16 +3798,42 @@ function renderReview(root) {
   const total = state.transactions.length;
   const tagged = state.transactions.filter(t => t.tax_category).length;
   const untagged = total - tagged;
-  const included = state.transactions.filter(t => t.included);
-  const includedCount = included.length;
-  const includedTotal = included.reduce((s, t) => s + Math.abs(t.amount), 0);
 
-  // Apply filter
-  let visible = state.transactions;
-  if (state.filter === 'untagged') visible = state.transactions.filter(t => !t.tax_category);
-  else if (state.filter === 'tagged') visible = state.transactions.filter(t => t.tax_category);
-  else if (state.filter === 'included') visible = state.transactions.filter(t => t.included);
-  else if (state.filter === 'low_conf') visible = state.transactions.filter(t => t.confidence > 0 && t.confidence < 0.7);
+  // Ensure dateRange has sensible defaults on first use
+  if (!state.dateRange) state.dateRange = { from: '', to: '', preset: 'ytd' };
+  if (!state.dateRange.from && !state.dateRange.to && state.dateRange.preset !== 'custom' && state.dateRange.preset !== 'all_time') {
+    const range = computeDateRangeFromPreset(state.dateRange.preset || 'ytd');
+    if (range) {
+      state.dateRange.from = range.from;
+      state.dateRange.to = range.to;
+    }
+  }
+  if (!state.filters) {
+    state.filters = { categories: [], purposes: [], sources: [], merchantQuery: '', amountMin: null, amountMax: null, minConfidence: null };
+  }
+
+  // Date-range partition (used for the "in range" counter that's independent of other filters)
+  const inDateRange = state.transactions.filter(t => txInDateRange(t, state.dateRange));
+  const inDateRangeCount = inDateRange.length;
+  const outOfRangeCount = total - inDateRangeCount;
+
+  // Apply the full filter set — date range AND all filter axes.
+  // This is the actual visible set the user sees and bulk-actions on.
+  const inScope = state.transactions.filter(t => txPassesFilters(t, state.dateRange, state.filters));
+  const inScopeCount = inScope.length;
+  const inScopeIncluded = inScope.filter(t => t.included);
+  const inScopeIncludedCount = inScopeIncluded.length;
+  const inScopeIncludedTotal = inScopeIncluded.reduce((s, t) => s + Math.abs(t.amount), 0);
+  const inScopeUntagged = inScope.filter(t => !t.tax_category).length;
+  const filterCount = activeFilterCount(state.filters);
+  const filterChips = activeFilterChips(state.filters);
+
+  // Filter chip narrows further (untagged/tagged/etc are display-only sub-slices of scope)
+  let visible = inScope;
+  if (state.filter === 'untagged') visible = inScope.filter(t => !t.tax_category);
+  else if (state.filter === 'tagged') visible = inScope.filter(t => t.tax_category);
+  else if (state.filter === 'included') visible = inScope.filter(t => t.included);
+  else if (state.filter === 'low_conf') visible = inScope.filter(t => t.confidence > 0 && t.confidence < 0.7);
 
   // Sort: untagged first, then by date desc
   visible = [...visible].sort((a, b) => {
@@ -3411,42 +3843,195 @@ function renderReview(root) {
   });
 
   const allVisibleIncluded = visible.length > 0 && visible.every(t => t.included);
-  const hasUntagged = untagged > 0;
+  const hasUntagged = inScopeUntagged > 0;
+  const rangeLabel = dateRangeLabel(state.dateRange);
+
+  // For filter panel dropdowns: which categories/purposes/sources actually exist in the data
+  // (limited to what's in the date range — no point offering filters for empty sets)
+  const catsInData = [...new Set(inDateRange.map(t => t.tax_category).filter(Boolean))];
+  const purposesInData = [...new Set(inDateRange.map(t => t.business_purpose).filter(Boolean))].sort();
+  const sourcesInData = [...new Set(inDateRange.map(t => t.categorized_by || 'unknown'))];
 
   root.innerHTML = `
+    <!-- ============ DATE RANGE BAR ============ -->
+    <div class="card" style="border-left:3px solid var(--steel, #3B5BB5);background:linear-gradient(to right, rgba(59,106,191,0.04), transparent);margin-bottom:12px">
+      <div class="row" style="justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px">
+        <div style="flex:1;min-width:280px">
+          <div class="card-eyebrow" style="color:var(--steel, #3B5BB5)">Report period</div>
+          <div style="font-family:var(--sans);font-size:18px;font-weight:700;color:var(--ink);letter-spacing:-0.01em;margin-top:2px">
+            ${escapeHTML(rangeLabel)}
+            <span class="muted tiny" style="font-weight:500;margin-left:8px">${inDateRangeCount} of ${total} transactions in range${outOfRangeCount > 0 ? ` · ${outOfRangeCount} outside range` : ''}</span>
+          </div>
+        </div>
+        <div class="row" style="gap:6px;flex-wrap:wrap;align-items:center">
+          <select id="dateRangePreset" class="btn btn-sm" style="padding:6px 10px;background:var(--card);border:1px solid var(--border-2)">
+            <option value="this_month" ${state.dateRange.preset==='this_month'?'selected':''}>This month</option>
+            <option value="last_month" ${state.dateRange.preset==='last_month'?'selected':''}>Last month</option>
+            <option value="this_quarter" ${state.dateRange.preset==='this_quarter'?'selected':''}>This quarter</option>
+            <option value="ytd" ${state.dateRange.preset==='ytd'?'selected':''}>Year to date</option>
+            <option value="all_time" ${state.dateRange.preset==='all_time'?'selected':''}>All time</option>
+            <option value="custom" ${state.dateRange.preset==='custom'?'selected':''}>Custom range</option>
+          </select>
+          <input type="date" id="dateFrom" value="${state.dateRange.from || ''}" style="padding:6px 8px;border:1px solid var(--border-2);border-radius:var(--radius-sm);font-family:var(--sans);font-size:12.5px" title="From date"/>
+          <span class="muted tiny">to</span>
+          <input type="date" id="dateTo" value="${state.dateRange.to || ''}" style="padding:6px 8px;border:1px solid var(--border-2);border-radius:var(--radius-sm);font-family:var(--sans);font-size:12.5px" title="To date"/>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ FILTER PANEL ============ -->
+    <div class="card" style="border-left:3px solid ${filterCount > 0 ? 'var(--accent-2, #4F9E8E)' : 'var(--border-2)'};background:${filterCount > 0 ? 'linear-gradient(to right, rgba(5,150,105,0.03), transparent)' : 'transparent'}">
+      <div class="row" style="justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:${state.filterPanelOpen ? '14px' : '0'}">
+        <div class="row" style="gap:10px;align-items:center;flex-wrap:wrap;flex:1">
+          <button class="btn btn-sm" id="filterToggleBtn" style="display:flex;align-items:center;gap:6px">
+            <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h12l-4.5 6v4l-3 2v-6L2 3z"/></svg>
+            ${filterCount > 0 ? `${filterCount} filter${filterCount===1?'':'s'} active` : 'Filters'}
+            <span style="opacity:0.6">${state.filterPanelOpen ? '▲' : '▼'}</span>
+          </button>
+          ${filterChips.map(chip => `
+            <span style="display:inline-flex;align-items:center;gap:6px;padding:4px 10px;background:var(--card);border:1px solid var(--accent-2, #4F9E8E);color:var(--accent-2, #4F9E8E);border-radius:12px;font-size:11px;font-weight:600;font-family:var(--sans)">
+              ${escapeHTML(chip.label)}
+              <button class="btn btn-ghost" style="padding:0;color:inherit;font-size:14px;line-height:1;background:transparent;border:none" data-remove-filter="${chip.key}" title="Remove this filter">×</button>
+            </span>
+          `).join('')}
+          ${filterCount > 0 ? `<button class="btn btn-ghost btn-sm" id="clearFiltersBtn" style="color:var(--danger);font-size:11px">Clear all filters</button>` : ''}
+        </div>
+        <div class="muted tiny">
+          ${inScopeCount} transaction${inScopeCount===1?'':'s'} match · ${inScopeIncludedCount} included
+        </div>
+      </div>
+
+      ${state.filterPanelOpen ? `
+        <div style="padding:14px 0 4px;border-top:1px solid var(--border);display:grid;grid-template-columns:repeat(2, 1fr);gap:16px">
+
+          <!-- Tax category -->
+          <div>
+            <label style="display:block;font-family:var(--sans);font-size:10.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-3);font-weight:700;margin-bottom:6px">Tax category</label>
+            <div style="max-height:120px;overflow-y:auto;padding:6px 8px;background:var(--bg-alt);border-radius:var(--radius-sm)">
+              ${TAX_CATEGORIES.filter(c => catsInData.includes(c.id)).map(c => {
+                const active = state.filters.categories.includes(c.id);
+                const countInScope = inDateRange.filter(t => t.tax_category === c.id).length;
+                return `<label style="display:flex;align-items:center;gap:8px;padding:3px 0;cursor:pointer;font-size:12px">
+                  <input type="checkbox" data-filter-cat="${c.id}" ${active ? 'checked' : ''}/>
+                  <span style="flex:1">${escapeHTML(c.label)}</span>
+                  <span class="muted tiny">${countInScope}</span>
+                </label>`;
+              }).join('') || '<div class="muted tiny" style="padding:8px">No categorized transactions yet.</div>'}
+            </div>
+          </div>
+
+          <!-- Business purpose -->
+          <div>
+            <label style="display:block;font-family:var(--sans);font-size:10.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-3);font-weight:700;margin-bottom:6px">Business purpose</label>
+            <div style="max-height:120px;overflow-y:auto;padding:6px 8px;background:var(--bg-alt);border-radius:var(--radius-sm)">
+              ${purposesInData.map(p => {
+                const active = state.filters.purposes.includes(p);
+                const countInScope = inDateRange.filter(t => t.business_purpose === p).length;
+                return `<label style="display:flex;align-items:center;gap:8px;padding:3px 0;cursor:pointer;font-size:12px">
+                  <input type="checkbox" data-filter-purpose="${escapeHTML(p)}" ${active ? 'checked' : ''}/>
+                  <span style="flex:1">${escapeHTML(p)}</span>
+                  <span class="muted tiny">${countInScope}</span>
+                </label>`;
+              }).join('') || '<div class="muted tiny" style="padding:8px">No business purposes recorded yet.</div>'}
+            </div>
+          </div>
+
+          <!-- Merchant search -->
+          <div>
+            <label style="display:block;font-family:var(--sans);font-size:10.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-3);font-weight:700;margin-bottom:6px">Merchant contains</label>
+            <input type="text" id="filterMerchant" value="${escapeHTML(state.filters.merchantQuery || '')}" placeholder="e.g., anthropic, uber, starbucks" style="width:100%;padding:8px 10px;border:1px solid var(--border-2);border-radius:var(--radius-sm);font-family:var(--sans);font-size:13px"/>
+          </div>
+
+          <!-- Categorization source -->
+          <div>
+            <label style="display:block;font-family:var(--sans);font-size:10.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-3);font-weight:700;margin-bottom:6px">Categorized by</label>
+            <div style="display:flex;gap:6px;flex-wrap:wrap">
+              ${[
+                { id: 'user', label: 'You', color: 'var(--success, #4F9E8E)' },
+                { id: 'rule', label: 'Rule', color: 'var(--gold-2, #C98A2B)' },
+                { id: 'ai', label: 'AI', color: 'var(--steel, #3B5BB5)' },
+                { id: 'unknown', label: 'Untagged', color: 'var(--ink-3)' },
+              ].filter(s => sourcesInData.includes(s.id)).map(s => {
+                const active = state.filters.sources.includes(s.id);
+                return `<label style="display:flex;align-items:center;gap:6px;padding:6px 12px;background:${active ? s.color : 'var(--bg-alt)'};color:${active ? '#fff' : 'var(--ink-2)'};border:1px solid ${active ? s.color : 'var(--border-2)'};border-radius:16px;cursor:pointer;font-size:11.5px;font-weight:600">
+                  <input type="checkbox" data-filter-src="${s.id}" ${active ? 'checked' : ''} style="display:none"/>
+                  ${escapeHTML(s.label)}
+                </label>`;
+              }).join('')}
+            </div>
+          </div>
+
+          <!-- Amount range -->
+          <div>
+            <label style="display:block;font-family:var(--sans);font-size:10.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-3);font-weight:700;margin-bottom:6px">Amount range</label>
+            <div class="row" style="gap:8px;align-items:center">
+              <input type="number" id="filterAmtMin" value="${state.filters.amountMin ?? ''}" placeholder="Min" step="1" min="0" style="flex:1;padding:8px 10px;border:1px solid var(--border-2);border-radius:var(--radius-sm);font-family:var(--sans);font-size:13px"/>
+              <span class="muted tiny">to</span>
+              <input type="number" id="filterAmtMax" value="${state.filters.amountMax ?? ''}" placeholder="Max" step="1" min="0" style="flex:1;padding:8px 10px;border:1px solid var(--border-2);border-radius:var(--radius-sm);font-family:var(--sans);font-size:13px"/>
+            </div>
+          </div>
+
+          <!-- Confidence threshold -->
+          <div>
+            <label style="display:block;font-family:var(--sans);font-size:10.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-3);font-weight:700;margin-bottom:6px">Minimum AI confidence</label>
+            <div class="row" style="gap:8px;align-items:center">
+              <select id="filterMinConf" style="flex:1;padding:8px 10px;border:1px solid var(--border-2);border-radius:var(--radius-sm);font-family:var(--sans);font-size:13px">
+                <option value="" ${!state.filters.minConfidence?'selected':''}>Any confidence</option>
+                <option value="0.5" ${state.filters.minConfidence==0.5?'selected':''}>≥ 50%</option>
+                <option value="0.7" ${state.filters.minConfidence==0.7?'selected':''}>≥ 70%</option>
+                <option value="0.85" ${state.filters.minConfidence==0.85?'selected':''}>≥ 85%</option>
+                <option value="0.95" ${state.filters.minConfidence==0.95?'selected':''}>≥ 95%</option>
+              </select>
+            </div>
+            <div class="field-hint" style="font-size:10.5px;color:var(--ink-3);margin-top:4px;line-height:1.4">Only affects AI-categorized transactions. User and rule categorizations pass through.</div>
+          </div>
+        </div>
+      ` : ''}
+    </div>
+
     <!-- ============ HEADER WITH INCLUSION COUNTER ============ -->
     <div class="card" style="border-left:3px solid var(--gold);background:linear-gradient(to right, rgba(212,175,55,0.04), transparent)">
       <div class="row" style="justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px">
         <div>
           <div class="card-eyebrow">Building report</div>
-          <div style="font-family:var(--sans);font-size:24px;font-weight:800;color:var(--navy);letter-spacing:-0.01em;line-height:1.1">
-            ${includedCount} transaction${includedCount === 1 ? '' : 's'} included
-            <span style="font-family:var(--mono);font-weight:700;color:var(--accent-2);margin-left:8px;font-size:20px">${fmt.money(includedTotal, {absolute: true})}</span>
+          <div style="font-family:var(--sans);font-size:24px;font-weight:600;color:var(--navy);letter-spacing:-0.01em;line-height:1.1">
+            ${inScopeIncludedCount} transaction${inScopeIncludedCount === 1 ? '' : 's'} included
+            <span style="font-family:var(--mono);font-weight:700;color:var(--accent-2);margin-left:8px;font-size:20px">${fmt.money(inScopeIncludedTotal, {absolute: true})}</span>
           </div>
-          <div class="muted tiny mt-4">${tagged} of ${total} categorized · ${untagged} need review</div>
+          <div class="muted tiny mt-4">
+            ${filterCount > 0
+              ? `Within your filter set · ${inScope.filter(t=>t.tax_category).length} of ${inScopeCount} match are categorized · ${inScopeUntagged} still need review`
+              : `Within the ${escapeHTML(rangeLabel.toLowerCase())} range · ${inScope.filter(t=>t.tax_category).length} of ${inScopeCount} in range are categorized · ${inScopeUntagged} still need review`
+            }
+          </div>
         </div>
         <div class="row" style="gap:8px;flex-wrap:wrap">
+          ${inScopeCount > 0 && inScopeIncludedCount < inScopeCount ? `
+            <button class="btn btn-primary" id="includeAllInScopeBtn" title="Include every transaction matching your current filters">
+              ✓ Include all ${inScopeCount} ${filterCount > 0 ? 'matching' : 'in date range'}
+            </button>
+          ` : ''}
           ${hasUntagged ? `
             <button class="btn btn-gold" id="aiClassifyBtn" title="Categorize untagged transactions with AI">
-              ${state.settings.ai_api_key ? `🤖 AI categorize ${untagged} untagged` : `✨ Demo AI categorize ${untagged} untagged`}
+              ${state.settings.ai_api_key ? `🤖 AI categorize ${inScopeUntagged} untagged` : `✨ Demo AI categorize ${inScopeUntagged} untagged`}
             </button>
           ` : ''}
           <button class="btn" id="manageRulesBtn">Rules (${state.rules.length})</button>
-          <button class="btn btn-primary" id="goExportBtn" ${includedCount === 0 ? 'disabled' : ''}>
-            Export ${includedCount} →
+          <button class="btn btn-primary" id="goExportBtn" ${inScopeIncludedCount === 0 ? 'disabled' : ''}>
+            Export ${inScopeIncludedCount} →
           </button>
         </div>
       </div>
     </div>
 
-    <!-- ============ FILTER + BULK ACTIONS ============ -->
+    <!-- ============ QUICK FILTER CHIPS + BULK ACTIONS ============ -->
     <div class="card">
       <div class="row" style="justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:14px">
         <div class="em-chip-row" style="margin:0">
-          <div class="em-chip ${state.filter==='all'?'active':''}" data-filter="all">All (${total})</div>
-          <div class="em-chip ${state.filter==='untagged'?'active':''}" data-filter="untagged">Untagged (${untagged})</div>
-          <div class="em-chip ${state.filter==='tagged'?'active':''}" data-filter="tagged">Categorized (${tagged})</div>
-          <div class="em-chip ${state.filter==='included'?'active':''}" data-filter="included">In report (${includedCount})</div>
+          <div class="em-chip ${state.filter==='all'?'active':''}" data-filter="all">${filterCount > 0 ? 'All matching' : 'All in range'} (${inScopeCount})</div>
+          <div class="em-chip ${state.filter==='untagged'?'active':''}" data-filter="untagged">Untagged (${inScopeUntagged})</div>
+          <div class="em-chip ${state.filter==='tagged'?'active':''}" data-filter="tagged">Categorized (${inScope.filter(t=>t.tax_category).length})</div>
+          <div class="em-chip ${state.filter==='included'?'active':''}" data-filter="included">In report (${inScopeIncludedCount})</div>
           <div class="em-chip ${state.filter==='low_conf'?'active':''}" data-filter="low_conf">Low confidence</div>
         </div>
         <div class="row" style="gap:8px">
@@ -3457,11 +4042,11 @@ function renderReview(root) {
             <details style="position:relative">
               <summary class="btn btn-sm" style="display:inline-block;list-style:none">Include by category ▾</summary>
               <div style="position:absolute;right:0;top:100%;margin-top:4px;background:var(--card);border:1px solid var(--border-2);border-radius:var(--radius-sm);box-shadow:0 4px 12px rgba(0,0,0,0.08);z-index:10;min-width:280px;padding:6px">
-                ${TAX_CATEGORIES.filter(c => state.transactions.some(t => t.tax_category === c.id && !t.included)).map(c => {
-                  const count = state.transactions.filter(t => t.tax_category === c.id && !t.included).length;
+                ${TAX_CATEGORIES.filter(c => inScope.some(t => t.tax_category === c.id && !t.included)).map(c => {
+                  const count = inScope.filter(t => t.tax_category === c.id && !t.included).length;
                   return `<button class="btn btn-ghost" style="width:100%;text-align:left;padding:6px 10px" data-include-cat="${c.id}">+ ${escapeHTML(c.label)} <span class="muted">(${count})</span></button>`;
                 }).join('')}
-                ${TAX_CATEGORIES.filter(c => state.transactions.some(t => t.tax_category === c.id && !t.included)).length === 0 ? '<div class="muted tiny" style="padding:8px">All categorized transactions already included.</div>' : ''}
+                ${TAX_CATEGORIES.filter(c => inScope.some(t => t.tax_category === c.id && !t.included)).length === 0 ? '<div class="muted tiny" style="padding:8px">All categorized transactions in scope already included.</div>' : ''}
               </div>
             </details>
           ` : ''}
@@ -3487,21 +4072,183 @@ function renderReview(root) {
 
       ${visible.length === 0 ? `
         <div class="empty">
-          <h3>No transactions match this filter.</h3>
-          <p>Switch filters or load more data.</p>
+          ${inDateRangeCount === 0 && total > 0 ? `
+            <h3>No transactions in this date range.</h3>
+            <p>You have ${total} transactions in total, but none fall between ${escapeHTML(state.dateRange.from || 'the beginning')} and ${escapeHTML(state.dateRange.to || 'now')}. Widen the date range, or switch to "All time" to see everything.</p>
+          ` : filterCount > 0 ? `
+            <h3>No transactions match your filters.</h3>
+            <p>${inDateRangeCount} transactions in date range, but none pass your ${filterCount} active filter${filterCount===1?'':'s'}. Clear filters to see everything in range.</p>
+          ` : `
+            <h3>No transactions match this filter.</h3>
+            <p>Switch filters or load more data.</p>
+          `}
         </div>
       ` : ''}
     </div>
 
     <div class="row" style="justify-content:space-between;margin-top:18px;flex-wrap:wrap;gap:8px">
       <button class="btn" onclick="state.currentStep='upload';save();render()">← Back to upload</button>
-      <button class="btn btn-primary" id="goExportBtn2" ${includedCount === 0 ? 'disabled' : ''}>
-        Export ${includedCount} →
+      <button class="btn btn-primary" id="goExportBtn2" ${inScopeIncludedCount === 0 ? 'disabled' : ''}>
+        Export ${inScopeIncludedCount} →
       </button>
     </div>
   `;
 
-  // Wire up
+  // ===== Wire up =====
+
+  // Date range preset selector
+  const presetSel = document.getElementById('dateRangePreset');
+  if (presetSel) presetSel.onchange = (e) => {
+    const preset = e.target.value;
+    state.dateRange.preset = preset;
+    if (preset !== 'custom') {
+      const range = computeDateRangeFromPreset(preset);
+      if (range) {
+        state.dateRange.from = range.from;
+        state.dateRange.to = range.to;
+      }
+    }
+    save();
+    render();
+  };
+
+  // Date from/to inputs — switch preset to 'custom' when user manually edits
+  const dateFromEl = document.getElementById('dateFrom');
+  const dateToEl = document.getElementById('dateTo');
+  const bindDateInput = (el, key) => {
+    if (!el) return;
+    el.onchange = (e) => {
+      state.dateRange[key] = e.target.value;
+      state.dateRange.preset = 'custom';
+      save();
+      render();
+    };
+  };
+  bindDateInput(dateFromEl, 'from');
+  bindDateInput(dateToEl, 'to');
+
+  // Filter panel toggle
+  const filterToggleBtn = document.getElementById('filterToggleBtn');
+  if (filterToggleBtn) filterToggleBtn.onclick = () => {
+    state.filterPanelOpen = !state.filterPanelOpen;
+    render();
+  };
+
+  // Individual filter removal chips (× button on each active filter pill)
+  document.querySelectorAll('[data-remove-filter]').forEach(btn => {
+    btn.onclick = (e) => {
+      e.stopPropagation();
+      const key = btn.dataset.removeFilter;
+      if (key === 'categories' || key === 'purposes' || key === 'sources') state.filters[key] = [];
+      else if (key === 'merchantQuery') state.filters.merchantQuery = '';
+      else state.filters[key] = null;
+      save();
+      render();
+    };
+  });
+
+  // Clear all filters
+  const clearFiltersBtn = document.getElementById('clearFiltersBtn');
+  if (clearFiltersBtn) clearFiltersBtn.onclick = () => {
+    resetFilters();
+    save();
+    render();
+    toast('Cleared all filters.');
+  };
+
+  // Filter panel controls
+  document.querySelectorAll('[data-filter-cat]').forEach(chk => {
+    chk.onchange = (e) => {
+      const id = chk.dataset.filterCat;
+      if (chk.checked) {
+        if (!state.filters.categories.includes(id)) state.filters.categories.push(id);
+      } else {
+        state.filters.categories = state.filters.categories.filter(x => x !== id);
+      }
+      save();
+      render();
+    };
+  });
+  document.querySelectorAll('[data-filter-purpose]').forEach(chk => {
+    chk.onchange = () => {
+      const p = chk.dataset.filterPurpose;
+      if (chk.checked) {
+        if (!state.filters.purposes.includes(p)) state.filters.purposes.push(p);
+      } else {
+        state.filters.purposes = state.filters.purposes.filter(x => x !== p);
+      }
+      save();
+      render();
+    };
+  });
+  document.querySelectorAll('[data-filter-src]').forEach(chk => {
+    // These are hidden checkboxes styled as pill buttons — click the label handles it
+    const label = chk.closest('label');
+    if (label) label.onclick = (e) => {
+      e.preventDefault();
+      const src = chk.dataset.filterSrc;
+      if (state.filters.sources.includes(src)) {
+        state.filters.sources = state.filters.sources.filter(x => x !== src);
+      } else {
+        state.filters.sources.push(src);
+      }
+      save();
+      render();
+    };
+  });
+  const merchantInput = document.getElementById('filterMerchant');
+  if (merchantInput) {
+    let debounce = null;
+    merchantInput.oninput = (e) => {
+      clearTimeout(debounce);
+      const val = e.target.value;
+      debounce = setTimeout(() => {
+        state.filters.merchantQuery = val;
+        save();
+        render();
+      }, 300);
+    };
+  }
+  const amtMinInput = document.getElementById('filterAmtMin');
+  if (amtMinInput) amtMinInput.onchange = (e) => {
+    const v = e.target.value.trim();
+    state.filters.amountMin = v === '' ? null : parseFloat(v);
+    save();
+    render();
+  };
+  const amtMaxInput = document.getElementById('filterAmtMax');
+  if (amtMaxInput) amtMaxInput.onchange = (e) => {
+    const v = e.target.value.trim();
+    state.filters.amountMax = v === '' ? null : parseFloat(v);
+    save();
+    render();
+  };
+  const minConfSel = document.getElementById('filterMinConf');
+  if (minConfSel) minConfSel.onchange = (e) => {
+    const v = e.target.value;
+    state.filters.minConfidence = v === '' ? null : parseFloat(v);
+    save();
+    render();
+  };
+
+  // Include all in scope (matches current filters) — the flagship button
+  const includeAllInScopeBtn = document.getElementById('includeAllInScopeBtn');
+  if (includeAllInScopeBtn) includeAllInScopeBtn.onclick = () => {
+    let count = 0;
+    for (const tx of inScope) {
+      if (!tx.included) {
+        tx.included = true;
+        getMeta(tx.id).included = true;
+        count++;
+      }
+    }
+    saveTxMeta();
+    save();
+    render();
+    toast(`Included ${count} transaction${count===1?'':'s'}.`);
+  };
+
+  // Filter chips
   document.querySelectorAll('[data-filter]').forEach(chip => {
     chip.onclick = () => {
       state.filter = chip.dataset.filter;
@@ -3520,24 +4267,30 @@ function renderReview(root) {
   if (includeVisibleBtn) {
     includeVisibleBtn.onclick = () => {
       const newValue = !allVisibleIncluded;
-      visible.forEach(t => { t.included = newValue; });
+      visible.forEach(t => {
+        t.included = newValue;
+        getMeta(t.id).included = newValue;
+      });
+      saveTxMeta();
       save();
       render();
       toast(newValue ? `Included ${visible.length} in report.` : `Removed ${visible.length} from report.`);
     };
   }
 
-  // Include-by-category buttons
+  // Include-by-category buttons — respect current scope (date range + filters)
   document.querySelectorAll('[data-include-cat]').forEach(btn => {
     btn.onclick = (e) => {
       const catId = e.currentTarget.dataset.includeCat;
       let count = 0;
-      state.transactions.forEach(t => {
-        if (t.tax_category === catId && !t.included) {
-          t.included = true;
+      for (const tx of inScope) {
+        if (tx.tax_category === catId && !tx.included) {
+          tx.included = true;
+          getMeta(tx.id).included = true;
           count++;
         }
-      });
+      }
+      saveTxMeta();
       save();
       render();
       toast(`Included ${count} ${TAX_CATEGORIES.find(c => c.id === catId)?.label || catId} transactions.`);
@@ -3548,7 +4301,7 @@ function renderReview(root) {
   ['goExportBtn', 'goExportBtn2'].forEach(id => {
     const btn = document.getElementById(id);
     if (btn) btn.onclick = () => {
-      if (includedCount === 0) {
+      if (inScopeIncludedCount === 0) {
         toast('Include some transactions first.');
         return;
       }
@@ -3659,7 +4412,7 @@ function renderTransactionRow(tx) {
 }
 
 function wireTransactionRows() {
-  // Row checkboxes for inclusion
+  // Row checkboxes for inclusion — persist to txMeta side map
   document.querySelectorAll('.row-include').forEach(chk => {
     chk.onchange = (e) => {
       const tr = e.target.closest('tr');
@@ -3667,6 +4420,8 @@ function wireTransactionRows() {
       const tx = state.transactions.find(t => t.id === id);
       if (!tx) return;
       tx.included = e.target.checked;
+      getMeta(id).included = tx.included;
+      saveTxMeta();
       save();
       render();
     };
@@ -3708,6 +4463,12 @@ function wireTransactionRows() {
       tx.included = includedChk.checked;
       tx.categorized_by = 'user';
       tx.confidence = 1;
+
+      // Persist metadata to side map (NOT the Tax OS ledger — those fields are ours)
+      const meta = getMeta(tx.id);
+      meta.business_purpose = tx.business_purpose;
+      meta.included = tx.included;
+      saveTxMeta();
 
       // Add to known purposes
       if (tx.business_purpose && !state.businessPurposes.includes(tx.business_purpose) && !DEFAULT_BUSINESS_PURPOSES.includes(tx.business_purpose)) {
@@ -3838,12 +4599,12 @@ function showAIProgress({ label, total }) {
       const el = document.getElementById('em-ai-progress');
       if (!el) return;
       el.style.background = 'linear-gradient(to right, rgba(5,150,105,0.05), transparent)';
-      el.style.borderLeftColor = 'var(--accent-2, #059669)';
-      el.style.borderColor = 'var(--accent-2, #059669)';
+      el.style.borderLeftColor = 'var(--accent-2, #4F9E8E)';
+      el.style.borderColor = 'var(--accent-2, #4F9E8E)';
       el.innerHTML = `
         <div style="display:flex;align-items:center;gap:10px;flex:1">
-          <div style="width:20px;height:20px;background:var(--accent-2, #059669);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px;font-weight:700">✓</div>
-          <div style="font-family:var(--sans);font-size:13px;font-weight:700;color:var(--accent-2, #059669)">${escapeHTML(message)}</div>
+          <div style="width:20px;height:20px;background:var(--accent-2, #4F9E8E);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px;font-weight:700">✓</div>
+          <div style="font-family:var(--sans);font-size:13px;font-weight:700;color:var(--accent-2, #4F9E8E)">${escapeHTML(message)}</div>
         </div>
       `;
       setTimeout(() => el && el.remove(), 3000);
@@ -3852,12 +4613,12 @@ function showAIProgress({ label, total }) {
       const el = document.getElementById('em-ai-progress');
       if (!el) return;
       el.style.background = 'rgba(185,28,28,0.04)';
-      el.style.borderLeftColor = 'var(--danger, #b91c1c)';
-      el.style.borderColor = 'var(--danger, #b91c1c)';
+      el.style.borderLeftColor = 'var(--danger, #B4453C)';
+      el.style.borderColor = 'var(--danger, #B4453C)';
       el.innerHTML = `
         <div style="display:flex;align-items:center;gap:10px;flex:1">
-          <div style="width:20px;height:20px;background:var(--danger, #b91c1c);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px;font-weight:700">!</div>
-          <div style="font-family:var(--sans);font-size:13px;font-weight:700;color:var(--danger, #b91c1c)">${escapeHTML(message)}</div>
+          <div style="width:20px;height:20px;background:var(--danger, #B4453C);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px;font-weight:700">!</div>
+          <div style="font-family:var(--sans);font-size:13px;font-weight:700;color:var(--danger, #B4453C)">${escapeHTML(message)}</div>
         </div>
         <button class="btn btn-sm" onclick="this.closest('#em-ai-progress').remove()">Dismiss</button>
       `;
@@ -4033,7 +4794,14 @@ function openRulesModal() {
    STEP 3 — EXPORT
    ========================================================================= */
 function renderExport(root) {
-  const includable = state.transactions.filter(t => t.included && t.tax_category && t.tax_category !== 'personal');
+  // The exported report reflects the same scope as the review step:
+  //   included AND date range AND all active filters AND categorized AND not personal
+  const includable = state.transactions.filter(t =>
+    t.included &&
+    txPassesFilters(t, state.dateRange, state.filters) &&
+    t.tax_category &&
+    t.tax_category !== 'personal'
+  );
   // Group by tax category for summary
   const byCategory = {};
   for (const tx of includable) {
@@ -4045,11 +4813,23 @@ function renderExport(root) {
   const sortedCats = Object.entries(byCategory).sort(([,a], [,b]) => b.total - a.total);
   const grandTotal = includable.reduce((s, t) => s + Math.abs(t.amount), 0);
 
-  // Date range
+  // Period label preference order:
+  //   1. User-set override in settings
+  //   2. Date range if bounded on both sides
+  //   3. Actual min/max transaction dates
   const dates = includable.map(t => t.date).filter(Boolean).sort();
   const startDate = dates[0] || '';
   const endDate = dates[dates.length - 1] || '';
-  const periodLabel = state.settings.current_period_label || (startDate && endDate ? `${fmt.dateShort(startDate)} – ${fmt.dateShort(endDate)}` : '');
+  let periodLabel = state.settings.current_period_label;
+  if (!periodLabel) {
+    if (state.dateRange && (state.dateRange.from || state.dateRange.to)) {
+      periodLabel = dateRangeLabel(state.dateRange);
+    } else if (startDate && endDate) {
+      periodLabel = `${fmt.dateShort(startDate)} – ${fmt.dateShort(endDate)}`;
+    } else {
+      periodLabel = 'All transactions';
+    }
+  }
 
   root.innerHTML = `
     <div class="card">
@@ -4165,7 +4945,7 @@ function renderExport(root) {
 /**
  * Render a professional, letterhead-formatted expense report ready for printing
  * or saving as PDF. Layout:
- *   1. Letterhead band — BCG monogram seal, entity name (Fraunces italic), tagline,
+ *   1. Letterhead band — BCG monogram, entity name (Sora 600), tagline,
  *      gold accent rule
  *   2. Document title block — "EXPENSE REPORT" + period + meta (right-aligned)
  *   3. Bill-from / period-info two-column block
@@ -4173,8 +4953,9 @@ function renderExport(root) {
  *   5. Page break, then detail sections per category
  *   6. Footer — EIN, generation timestamp, page numbers via CSS
  *
- * Brand: navy (#0E2A47) + gold (#D4AF37), Fraunces italic for display type,
- * Montserrat for body, IBM Plex Mono for numerics.
+ * Brand System 2.0: Ink (#16181D) + Paper (#FAF8F4), Signal Gold (#E3AC55)
+ * as accent of record. Sora 600 for display, DM Sans for body, DM Mono for
+ * tabular figures.
  */
 function buildPrintReport(transactions, sortedCats, grandTotal, periodLabel) {
   const root = document.getElementById('printReport');
@@ -4199,7 +4980,7 @@ function buildPrintReport(transactions, sortedCats, grandTotal, periodLabel) {
          The .em-print-only wrapper guarantees they don't show on screen. */
       @media print {
         @page { margin: 0.6in 0.7in; }
-        body { background: #fff !important; color: #1a1a1a !important; }
+        body { background: #fff !important; color: #16181D !important; }
         .sidebar, .topbar, .no-print, .brand-band, .brand-hero, .em-screen-only,
         #em-stepIndicator, #em-viewContainer, #em-modalRoot, #em-toastRoot {
           display: none !important;
@@ -4208,8 +4989,8 @@ function buildPrintReport(transactions, sortedCats, grandTotal, periodLabel) {
         #printReport.em-print-only { display: block !important; }
       }
       #printReport {
-        font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
-        color: #1a1a1a;
+        font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+        color: #16181D;
         line-height: 1.5;
       }
       #printReport .er-letterhead {
@@ -4218,7 +4999,7 @@ function buildPrintReport(transactions, sortedCats, grandTotal, periodLabel) {
         align-items: center;
         gap: 18px;
         padding-bottom: 22px;
-        border-bottom: 2px solid #0E2A47;
+        border-bottom: 2px solid #16181D;
         position: relative;
         margin-bottom: 4px;
       }
@@ -4229,7 +5010,7 @@ function buildPrintReport(transactions, sortedCats, grandTotal, periodLabel) {
         bottom: -2px;
         width: 96px;
         height: 2px;
-        background: #D4AF37;
+        background: #C98A2B;
       }
       #printReport .er-seal {
         width: 60px;
@@ -4237,21 +5018,20 @@ function buildPrintReport(transactions, sortedCats, grandTotal, periodLabel) {
         flex-shrink: 0;
       }
       #printReport .er-entity-name {
-        font-family: 'Fraunces', Georgia, serif;
-        font-style: italic;
+        font-family: 'Sora', 'Helvetica Neue', sans-serif;
         font-weight: 600;
         font-size: 26px;
-        color: #0E2A47;
+        color: #16181D;
         margin: 0;
         line-height: 1.1;
         letter-spacing: -0.01em;
       }
       #printReport .er-entity-tagline {
-        font-family: 'Montserrat', sans-serif;
+        font-family: 'DM Sans', sans-serif;
         font-size: 10px;
         letter-spacing: 0.18em;
         text-transform: uppercase;
-        color: #b8941f;
+        color: #C98A2B;
         font-weight: 700;
         margin-top: 4px;
       }
@@ -4262,31 +5042,30 @@ function buildPrintReport(transactions, sortedCats, grandTotal, periodLabel) {
         margin: 22px 0 28px;
       }
       #printReport .er-doc-label {
-        font-family: 'Fraunces', Georgia, serif;
-        font-style: italic;
+        font-family: 'Sora', 'Helvetica Neue', sans-serif;
         font-weight: 600;
         font-size: 32px;
-        color: #0E2A47;
+        color: #16181D;
         margin: 0;
         letter-spacing: 0.02em;
         line-height: 1;
       }
       #printReport .er-doc-period {
-        font-family: 'Montserrat', sans-serif;
+        font-family: 'DM Sans', sans-serif;
         font-size: 13px;
-        color: #4a4a4a;
+        color: #3A3D44;
         margin-top: 6px;
         font-weight: 500;
       }
       #printReport .er-doc-meta {
         text-align: right;
-        font-family: 'IBM Plex Mono', monospace;
+        font-family: 'DM Mono', monospace;
         font-size: 11px;
-        color: #8a8a8a;
+        color: #74777E;
         line-height: 1.6;
       }
       #printReport .er-doc-meta strong {
-        color: #1a1a1a;
+        color: #16181D;
         font-weight: 700;
       }
       #printReport .er-meta-grid {
@@ -4295,31 +5074,31 @@ function buildPrintReport(transactions, sortedCats, grandTotal, periodLabel) {
         gap: 32px;
         margin-bottom: 28px;
         padding: 16px 0;
-        border-top: 1px solid #e8e6e0;
-        border-bottom: 1px solid #e8e6e0;
+        border-top: 1px solid #EDE8E0;
+        border-bottom: 1px solid #EDE8E0;
       }
       #printReport .er-meta-block-label {
-        font-family: 'Montserrat', sans-serif;
+        font-family: 'DM Sans', sans-serif;
         font-size: 9.5px;
         letter-spacing: 0.18em;
         text-transform: uppercase;
-        color: #8a8a8a;
+        color: #74777E;
         font-weight: 700;
         margin-bottom: 6px;
       }
       #printReport .er-meta-block-value {
-        font-family: 'Montserrat', sans-serif;
+        font-family: 'DM Sans', sans-serif;
         font-size: 12px;
-        color: #1a1a1a;
+        color: #16181D;
         line-height: 1.55;
       }
       #printReport .er-meta-block-value strong {
-        color: #0E2A47;
+        color: #16181D;
         font-weight: 700;
       }
       #printReport .er-summary-totals {
         background: linear-gradient(to right, rgba(14,42,71,0.03), transparent);
-        border-left: 4px solid #D4AF37;
+        border-left: 4px solid #E3AC55;
         padding: 18px 22px;
         margin-bottom: 24px;
         display: grid;
@@ -4327,18 +5106,18 @@ function buildPrintReport(transactions, sortedCats, grandTotal, periodLabel) {
         gap: 24px;
       }
       #printReport .er-totals-cell .label {
-        font-family: 'Montserrat', sans-serif;
+        font-family: 'DM Sans', sans-serif;
         font-size: 9.5px;
         letter-spacing: 0.16em;
         text-transform: uppercase;
-        color: #8a8a8a;
+        color: #74777E;
         font-weight: 700;
       }
       #printReport .er-totals-cell .value {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 800;
+        font-family: 'DM Sans', sans-serif;
+        font-weight:600;
         font-size: 22px;
-        color: #0E2A47;
+        color: #16181D;
         font-variant-numeric: tabular-nums;
         letter-spacing: -0.01em;
         margin-top: 4px;
@@ -4353,22 +5132,22 @@ function buildPrintReport(transactions, sortedCats, grandTotal, periodLabel) {
         align-items: baseline;
         margin-bottom: 10px;
         padding-bottom: 6px;
-        border-bottom: 1px solid #cfcdc5;
+        border-bottom: 1px solid #DDD6CA;
       }
       #printReport .er-section-title {
-        font-family: 'Montserrat', sans-serif;
+        font-family: 'DM Sans', sans-serif;
         font-size: 11px;
         letter-spacing: 0.14em;
         text-transform: uppercase;
-        color: #0E2A47;
+        color: #16181D;
         font-weight: 700;
         margin: 0;
       }
       #printReport .er-section-subtotal {
-        font-family: 'IBM Plex Mono', monospace;
+        font-family: 'DM Mono', monospace;
         font-size: 13px;
         font-weight: 700;
-        color: #0E2A47;
+        color: #16181D;
         font-variant-numeric: tabular-nums;
       }
       #printReport .er-table {
@@ -4379,65 +5158,64 @@ function buildPrintReport(transactions, sortedCats, grandTotal, periodLabel) {
       #printReport .er-table thead th {
         text-align: left;
         padding: 8px 10px;
-        font-family: 'Montserrat', sans-serif;
+        font-family: 'DM Sans', sans-serif;
         font-size: 9.5px;
         letter-spacing: 0.1em;
         text-transform: uppercase;
         color: #fff;
-        background: #0E2A47;
+        background: #16181D;
         font-weight: 700;
       }
       #printReport .er-table thead th.num { text-align: right; }
       #printReport .er-table tbody td {
         padding: 7px 10px;
-        border-bottom: 1px solid #e8e6e0;
-        font-family: 'Montserrat', sans-serif;
-        color: #1a1a1a;
+        border-bottom: 1px solid #EDE8E0;
+        font-family: 'DM Sans', sans-serif;
+        color: #16181D;
         vertical-align: top;
       }
       #printReport .er-table tbody td.num {
         text-align: right;
-        font-family: 'IBM Plex Mono', monospace;
+        font-family: 'DM Mono', monospace;
         font-variant-numeric: tabular-nums;
         font-weight: 600;
       }
       #printReport .er-table tbody tr:nth-child(even) td { background: rgba(244,243,238,0.5); }
       #printReport .er-table .er-merchant { font-weight: 600; }
-      #printReport .er-table .er-purpose { color: #4a4a4a; font-size: 11px; }
+      #printReport .er-table .er-purpose { color: #3A3D44; font-size: 11px; }
       #printReport .er-table tfoot td {
         padding: 9px 10px;
-        font-family: 'Montserrat', sans-serif;
+        font-family: 'DM Sans', sans-serif;
         font-weight: 700;
-        border-top: 2px solid #0E2A47;
+        border-top: 2px solid #16181D;
         font-size: 12px;
       }
       #printReport .er-table tfoot td.num {
         text-align: right;
-        font-family: 'IBM Plex Mono', monospace;
+        font-family: 'DM Mono', monospace;
         font-variant-numeric: tabular-nums;
-        color: #0E2A47;
+        color: #16181D;
       }
       #printReport .er-grand-total-row {
         display: grid;
         grid-template-columns: 1fr auto;
         align-items: baseline;
         padding: 14px 22px;
-        background: #0E2A47;
+        background: #16181D;
         color: #fff;
         border-radius: 4px;
         margin-top: 24px;
       }
       #printReport .er-grand-total-label {
-        font-family: 'Montserrat', sans-serif;
+        font-family: 'DM Sans', sans-serif;
         font-size: 11px;
         letter-spacing: 0.18em;
         text-transform: uppercase;
         font-weight: 700;
-        color: #D4AF37;
+        color: #E3AC55;
       }
       #printReport .er-grand-total-amount {
-        font-family: 'Fraunces', serif;
-        font-style: italic;
+        font-family: 'Sora', 'Helvetica Neue', sans-serif;
         font-size: 26px;
         font-weight: 600;
         font-variant-numeric: tabular-nums;
@@ -4446,10 +5224,10 @@ function buildPrintReport(transactions, sortedCats, grandTotal, periodLabel) {
       #printReport .er-footer {
         margin-top: 36px;
         padding-top: 16px;
-        border-top: 1px solid #cfcdc5;
-        font-family: 'Montserrat', sans-serif;
+        border-top: 1px solid #DDD6CA;
+        font-family: 'DM Sans', sans-serif;
         font-size: 9.5px;
-        color: #8a8a8a;
+        color: #74777E;
         line-height: 1.6;
         display: grid;
         grid-template-columns: 1fr auto;
@@ -4457,7 +5235,7 @@ function buildPrintReport(transactions, sortedCats, grandTotal, periodLabel) {
       }
       #printReport .er-footer-right {
         text-align: right;
-        font-family: 'IBM Plex Mono', monospace;
+        font-family: 'DM Mono', monospace;
         letter-spacing: 0.04em;
       }
       #printReport .er-detail-page {
@@ -4466,18 +5244,18 @@ function buildPrintReport(transactions, sortedCats, grandTotal, periodLabel) {
       #printReport .er-cert {
         margin-top: 22px;
         padding: 14px 18px;
-        background: #f4f3ee;
-        border-left: 3px solid #D4AF37;
+        background: #FAF8F4;
+        border-left: 3px solid #E3AC55;
         font-size: 10.5px;
-        color: #4a4a4a;
+        color: #3A3D44;
         line-height: 1.6;
       }
       #printReport .er-cert strong {
-        font-family: 'Montserrat', sans-serif;
+        font-family: 'DM Sans', sans-serif;
         font-size: 10px;
         letter-spacing: 0.14em;
         text-transform: uppercase;
-        color: #0E2A47;
+        color: #16181D;
         font-weight: 700;
         display: block;
         margin-bottom: 4px;
@@ -4486,19 +5264,10 @@ function buildPrintReport(transactions, sortedCats, grandTotal, periodLabel) {
 
     <!-- LETTERHEAD -->
     <div class="er-letterhead">
-      <svg class="er-seal" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-label="Boyd Consulting Group seal">
-        <circle cx="32" cy="32" r="30" fill="#0E2A47"/>
-        <circle cx="32" cy="32" r="27" fill="none" stroke="#D4AF37" stroke-width="0.75"/>
-        <circle cx="32" cy="32" r="23" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.6"/>
-        <path d="M22 20 H38 C42 20 44.5 22.5 44.5 26 C44.5 28.5 43 30.5 41 31 C43.5 31.5 46 34 46 37.5 C46 41.5 43 44.5 39 44.5 H22 Z" fill="#D4AF37"/>
-        <path d="M27 24 V28.5 H36 C37.5 28.5 38.5 27.5 38.5 26 C38.5 24.5 37.5 24 36 24 Z" fill="#0E2A47"/>
-        <path d="M27 33 V40.5 H38 C39.5 40.5 41 39 41 37.5 C41 36 39.5 33 38 33 Z" fill="#0E2A47"/>
-        <circle cx="14" cy="32" r="1" fill="#D4AF37"/>
-        <circle cx="50" cy="32" r="1" fill="#D4AF37"/>
-      </svg>
+      <svg class="er-seal" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-label="Boyd Consulting Group monogram"><rect width="64" height="64" rx="19" fill="#16181D"/><text x="32" y="32" text-anchor="middle" dominant-baseline="central" font-family="Sora, Helvetica Neue, sans-serif" font-size="20" font-weight="600" letter-spacing="-0.5" fill="#FAF8F4">BC<tspan fill="#E3AC55">G</tspan></text></svg>
       <div>
         <h1 class="er-entity-name">${escapeHTML(entityName)}</h1>
-        <div class="er-entity-tagline">Strategy · People · Performance</div>
+        <div class="er-entity-tagline">Executive Insight · Bold Strategy · Measurable Impact</div>
       </div>
     </div>
 
@@ -4635,7 +5404,7 @@ function buildPrintReport(transactions, sortedCats, grandTotal, periodLabel) {
     <!-- FOOTER -->
     <div class="er-footer">
       <div>
-        <strong style="color:#0E2A47">${escapeHTML(entityName)}</strong> · Expense Report
+        <strong style="color:#16181D">${escapeHTML(entityName)}</strong> · Expense Report
         ${ein ? ` · EIN ${escapeHTML(ein)}` : ''}
       </div>
       <div class="er-footer-right">
@@ -4814,25 +5583,61 @@ function publicRender(rootEl, ctx = {}) {
     </div>
   `;
 
-  // Hydrate state from localStorage if first call this session
+  // Hydrate persistent state on first call this session
   if (!state._hydrated) {
-    state.transactions = Store.get('exp.transactions', []);
     state.rules = Store.get('exp.rules', []);
     state.businessPurposes = Store.get('exp.business_purposes', []);
     state.settings = { ...DEFAULT_SETTINGS, ...Store.get('exp.settings', {}) };
-    state.currentStep = Store.get('exp.current_step', 'upload');
-    if (state.transactions.length === 0) state.currentStep = 'upload';
+    state.txMeta = Store.get('exp.tx_meta', {}) || {};
 
-    // Migrate v0.1 schema
-    let migrated = 0;
-    for (const tx of state.transactions) {
-      if (tx.included === undefined) {
-        tx.included = false;
-        delete tx.excluded;
-        migrated++;
+    // MIGRATION: fold any old exp.transactions data into txMeta so we don't
+    // lose past work. Old shape had business_purpose/included as fields on
+    // each transaction; migrate them into the side map keyed by id.
+    const legacyTransactions = Store.get('exp.transactions', []);
+    if (legacyTransactions && legacyTransactions.length > 0) {
+      let migrated = 0;
+      for (const oldTx of legacyTransactions) {
+        if (!oldTx || !oldTx.id) continue;
+        if (!state.txMeta[oldTx.id]) state.txMeta[oldTx.id] = {};
+        const meta = state.txMeta[oldTx.id];
+        if (oldTx.business_purpose && !meta.business_purpose) {
+          meta.business_purpose = oldTx.business_purpose;
+          migrated++;
+        }
+        if (oldTx.included && meta.included === undefined) {
+          meta.included = true;
+          migrated++;
+        }
+        if (oldTx.note && !meta.note) {
+          meta.note = oldTx.note;
+          migrated++;
+        }
       }
+      if (migrated > 0) {
+        saveTxMeta();
+        console.log(`Migrated ${migrated} metadata fields from legacy exp.transactions.`);
+      }
+      // We DON'T delete exp.transactions in case the user rolls back; harmless.
     }
-    if (migrated > 0) save();
+
+    // Always start on review — no more upload step
+    state.currentStep = 'review';
+
+    // Hydrate date range (default to YTD if never set)
+    const savedRange = Store.get('exp.date_range', null);
+    if (savedRange) {
+      state.dateRange = savedRange;
+    } else {
+      // First time — default to YTD
+      const ytd = computeDateRangeFromPreset('ytd');
+      state.dateRange = { from: ytd.from, to: ytd.to, preset: 'ytd' };
+    }
+
+    // Hydrate filters (default to none)
+    const savedFilters = Store.get('exp.filters', null);
+    if (savedFilters) {
+      state.filters = { ...state.filters, ...savedFilters };
+    }
 
     // Inherit AI key from Tax OS if module doesn't have its own set
     try {
@@ -4844,6 +5649,31 @@ function publicRender(rootEl, ctx = {}) {
     } catch (e) { /* ignore */ }
 
     state._hydrated = true;
+  }
+
+  // ALWAYS refresh from Tax OS ledger on every render — so new uploads to
+  // Tax OS are immediately visible in Expense Reports.
+  const taxOSTransactions = (ctx.taxOSState && Array.isArray(ctx.taxOSState.transactions))
+    ? ctx.taxOSState.transactions
+    : [];
+  refreshFromLedger(taxOSTransactions);
+
+  // If ledger is empty, land on an informational screen instead of the old upload step.
+  // The user is expected to import via the main Tax OS Import CSV view.
+  if (state.transactions.length === 0) {
+    document.getElementById('em-viewContainer').innerHTML = `
+      <div class="card" style="text-align:center;padding:56px 32px">
+        <div style="font-family:var(--sans);font-size:32px;font-weight:600;color:var(--navy);margin-bottom:8px">No expenses in your ledger yet</div>
+        <p style="color:var(--ink-2);font-size:14px;max-width:520px;margin:12px auto;line-height:1.6">
+          Expense Reports reads directly from your main Tax OS transaction ledger.
+          Import a CSV using the <strong>Import CSV</strong> section in the sidebar,
+          then return here to categorize, review, and export.
+        </p>
+        <button class="btn btn-primary mt-16" onclick="window.location.hash='#upload'">Go to Import CSV</button>
+      </div>
+    `;
+    document.getElementById('em-stepIndicator').innerHTML = '';
+    return;
   }
 
   // Run the module's internal render
@@ -4940,7 +5770,7 @@ function renderDashboard(root) {
       <div class="brand-hero-meta">
         <div class="brand-hero-stat">
           <div class="brand-hero-stat-label">Net</div>
-          <div class="brand-hero-stat-val" style="color:${monthNet >= 0 ? 'var(--gold)' : '#FCA5A5'}">${monthNet >= 0 ? '+' : '-'}${fmt.money(Math.abs(monthNet), {absolute:true})}</div>
+          <div class="brand-hero-stat-val" style="color:${monthNet >= 0 ? 'var(--gold)' : '#E8B5AF'}">${monthNet >= 0 ? '+' : '-'}${fmt.money(Math.abs(monthNet), {absolute:true})}</div>
         </div>
         <div class="brand-hero-stat">
           <div class="brand-hero-stat-label">Transactions</div>
@@ -5098,8 +5928,8 @@ function renderDonut(cats, total) {
     <div class="donut-wrap">
       <svg class="donut-svg" width="160" height="160" viewBox="0 0 160 160">
         ${segs}
-        <text x="80" y="76" text-anchor="middle" font-family="Fraunces, serif" font-size="22" fill="#1A1715">${fmt.moneyShort(total)}</text>
-        <text x="80" y="96" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="9.5" fill="#8A847C" letter-spacing="1">TOTAL SPEND</text>
+        <text x="80" y="76" text-anchor="middle" font-family="Sora, sans-serif" font-weight="600" font-size="22" fill="#16181D">${fmt.moneyShort(total)}</text>
+        <text x="80" y="96" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="9.5" fill="#74777E" letter-spacing="1">TOTAL SPEND</text>
       </svg>
       <div class="donut-legend">
         ${cats.map(c => `
@@ -6299,15 +7129,11 @@ function renderReports(root) {
 /* =========================================================================
    BRAND HELPERS — reused across views and reports
    ========================================================================= */
-const BRAND_SEAL_SVG = `<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-label="Boyd Consulting Group seal">
-  <circle cx="32" cy="32" r="30" fill="#0E2A47"/>
-  <circle cx="32" cy="32" r="27" fill="none" stroke="#D4AF37" stroke-width="0.75"/>
-  <circle cx="32" cy="32" r="23" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.6"/>
-  <path d="M22 20 H38 C42 20 44.5 22.5 44.5 26 C44.5 28.5 43 30.5 41 31 C43.5 31.5 46 34 46 37.5 C46 41.5 43 44.5 39 44.5 H22 Z" fill="#D4AF37"/>
-  <path d="M27 24 V28.5 H36 C37.5 28.5 38.5 27.5 38.5 26 C38.5 24.5 37.5 24 36 24 Z" fill="#0E2A47"/>
-  <path d="M27 33 V40.5 H38 C39.5 40.5 41 39 41 37.5 C41 36 39.5 33 38 33 Z" fill="#0E2A47"/>
-  <circle cx="14" cy="32" r="1" fill="#D4AF37"/>
-  <circle cx="50" cy="32" r="1" fill="#D4AF37"/>
+const BRAND_SEAL_SVG = `<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-label="Boyd Consulting Group monogram">
+  <rect width="64" height="64" rx="19" fill="#16181D"/>
+  <text x="32" y="32" text-anchor="middle" dominant-baseline="central"
+        font-family="Sora, Helvetica Neue, sans-serif" font-size="20" font-weight="600"
+        letter-spacing="-0.5" fill="#FAF8F4">BC<tspan fill="#E3AC55">G</tspan></text>
 </svg>`;
 
 /** Letterhead block at the top of every report. */
@@ -6318,7 +7144,7 @@ function renderLetterhead() {
       <div class="report-letterhead-seal">${BRAND_SEAL_SVG}</div>
       <div class="report-letterhead-text">
         <div class="report-letterhead-name">${escapeHTML(entity)}</div>
-        <div class="report-letterhead-sub">Strategy · People · Performance</div>
+        <div class="report-letterhead-sub">Executive Insight · Bold Strategy · Measurable Impact</div>
       </div>
     </div>`;
 }
@@ -7570,7 +8396,7 @@ function renderCompOptimizer(root) {
       <div class="row" style="justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:16px">
         <div style="flex:1;min-width:280px">
           <div class="card-eyebrow">Recommended salary</div>
-          <div style="font-family:var(--sans);font-size:30px;font-weight:800;letter-spacing:-0.02em;color:var(--navy);margin-top:4px">
+          <div style="font-family:var(--sans);font-size:30px;font-weight:600;letter-spacing:-0.02em;color:var(--navy);margin-top:4px">
             ${fmt.money(rec.recommendation, {absolute:true})}
             <span class="muted tiny" style="font-size:13px;font-weight:500;margin-left:10px">${(rec.recommendation/scorpNet*100).toFixed(0)}% of net</span>
           </div>
@@ -7598,7 +8424,7 @@ function renderCompOptimizer(root) {
             <div class="row" style="justify-content:space-between;align-items:flex-start;margin-bottom:14px">
               <div>
                 <div class="card-eyebrow">${['Conservative','Moderate','Aggressive'][i]}</div>
-                <div style="font-family:var(--sans);font-size:24px;font-weight:800;color:var(--navy);letter-spacing:-0.01em;margin-top:2px">${fmt.money(sc.salary, {absolute:true})}</div>
+                <div style="font-family:var(--sans);font-size:24px;font-weight:600;color:var(--navy);letter-spacing:-0.01em;margin-top:2px">${fmt.money(sc.salary, {absolute:true})}</div>
                 <div class="muted tiny mt-4">${(sc.salaryToNetPct*100).toFixed(0)}% of net · ${sc.auditRisk.label}</div>
               </div>
               ${isRec ? `<div style="background:var(--gold);color:var(--navy);font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;font-weight:700;padding:4px 8px;border-radius:3px">Recommended</div>` : ''}
@@ -7617,7 +8443,7 @@ function renderCompOptimizer(root) {
                 <tr><td style="padding:3px 0;color:var(--ink-3)" class="tiny">Employee deferral max</td><td class="num" style="font-family:var(--mono);text-align:right;font-size:11.5px">${fmt.money(sc.retirement.employee_max, {absolute:true})}</td></tr>
                 <tr><td style="padding:3px 0;color:var(--ink-3)" class="tiny">Employer share max (25%)</td><td class="num" style="font-family:var(--mono);text-align:right;font-size:11.5px">${fmt.money(sc.retirement.employer_max, {absolute:true})}</td></tr>
                 <tr><td style="padding:6px 0"><strong>Combined max</strong></td><td class="num" style="font-family:var(--mono);text-align:right;font-weight:700;color:var(--accent-2)">${fmt.money(Math.min(SOLO_401K_2025.total_combined_limit, sc.retirement.employee_max + sc.retirement.employer_max), {absolute:true})}</td></tr>
-                <tr style="border-top:2px solid var(--ink)"><td style="padding:8px 0"><strong>Net cost after 401(k) tax shield</strong></td><td class="num" style="font-family:var(--mono);text-align:right;font-weight:800;color:${sc.effectivePayrollCost <= 0 ? 'var(--accent-2)' : 'var(--navy)'}">${sc.effectivePayrollCost <= 0 ? '+' : ''}${fmt.money(Math.abs(sc.effectivePayrollCost), {absolute:true})}</td></tr>
+                <tr style="border-top:2px solid var(--ink)"><td style="padding:8px 0"><strong>Net cost after 401(k) tax shield</strong></td><td class="num" style="font-family:var(--mono);text-align:right;font-weight:600;color:${sc.effectivePayrollCost <= 0 ? 'var(--accent-2)' : 'var(--navy)'}">${sc.effectivePayrollCost <= 0 ? '+' : ''}${fmt.money(Math.abs(sc.effectivePayrollCost), {absolute:true})}</td></tr>
               </tbody>
             </table>
             <button class="btn btn-sm btn-primary mt-12" data-pick-salary="${sc.salary}" style="width:100%">Pick this salary</button>
@@ -7641,7 +8467,7 @@ function renderCompOptimizer(root) {
         </div>
         <div style="flex:1;min-width:240px;text-align:right">
           <div class="card-eyebrow">Selected salary</div>
-          <div style="font-family:var(--sans);font-size:32px;font-weight:800;color:var(--navy);letter-spacing:-0.02em" id="sliderSalary">${fmt.money(currentSalary, {absolute:true})}</div>
+          <div style="font-family:var(--sans);font-size:32px;font-weight:600;color:var(--navy);letter-spacing:-0.02em" id="sliderSalary">${fmt.money(currentSalary, {absolute:true})}</div>
           <div class="muted tiny" id="sliderPct">${(currentSalary/scorpNet*100).toFixed(0)}% of net</div>
         </div>
       </div>
@@ -8177,7 +9003,7 @@ function renderTaxStrategy(root) {
         </div>
         <div style="text-align:right;min-width:200px">
           <div class="card-eyebrow">Additional savings available</div>
-          <div style="font-family:var(--sans);font-size:24px;font-weight:800;color:${additionalSavings > 0 ? 'var(--accent-2)' : 'var(--ink-3)'};font-variant-numeric:tabular-nums">${fmt.money(additionalSavings, {absolute:true})}</div>
+          <div style="font-family:var(--sans);font-size:24px;font-weight:600;color:${additionalSavings > 0 ? 'var(--accent-2)' : 'var(--ink-3)'};font-variant-numeric:tabular-nums">${fmt.money(additionalSavings, {absolute:true})}</div>
           <div class="muted tiny">By acting on recommendations below</div>
         </div>
       </div>
@@ -8214,14 +9040,14 @@ function renderTaxStrategy(root) {
       <div class="row" style="justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:14px">
         <div style="flex:1;min-width:280px">
           <div class="row" style="gap:10px;align-items:center;margin-bottom:6px">
-            <div style="width:32px;height:32px;border-radius:6px;background:var(--bg-alt);display:flex;align-items:center;justify-content:center;font-family:var(--sans);font-weight:800;color:var(--navy);font-size:13px">401k</div>
+            <div style="width:32px;height:32px;border-radius:6px;background:var(--bg-alt);display:flex;align-items:center;justify-content:center;font-family:var(--sans);font-weight:600;color:var(--navy);font-size:13px">401k</div>
             <div style="font-family:var(--sans);font-size:16px;font-weight:700;color:var(--ink)">Solo 401(k)</div>
           </div>
           <p class="muted tiny" style="line-height:1.55;margin:0">Pre-tax retirement contributions. Employee deferral (${fmt.money(SOLO_401K_2025.employee_deferral_limit, {absolute:true})} max) reduces W-2 wages. Employer profit-share (25% of W-2) is a corp deduction reducing K-1.</p>
         </div>
         <div style="text-align:right;min-width:200px">
           <div class="card-eyebrow">Tax saved on recommended</div>
-          <div style="font-family:var(--sans);font-size:22px;font-weight:800;color:var(--accent-2);font-variant-numeric:tabular-nums">${fmt.money(r401k.savingsRecommended, {absolute:true})}</div>
+          <div style="font-family:var(--sans);font-size:22px;font-weight:600;color:var(--accent-2);font-variant-numeric:tabular-nums">${fmt.money(r401k.savingsRecommended, {absolute:true})}</div>
           <div class="muted tiny">Contribute ${fmt.money(r401k.recommended, {absolute:true})} more</div>
         </div>
       </div>
@@ -8266,7 +9092,7 @@ function renderTaxStrategy(root) {
       <div class="row" style="justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:14px">
         <div style="flex:1;min-width:280px">
           <div class="row" style="gap:10px;align-items:center;margin-bottom:6px">
-            <div style="width:32px;height:32px;border-radius:6px;background:var(--bg-alt);display:flex;align-items:center;justify-content:center;font-family:var(--sans);font-weight:800;color:var(--navy);font-size:13px">HSA</div>
+            <div style="width:32px;height:32px;border-radius:6px;background:var(--bg-alt);display:flex;align-items:center;justify-content:center;font-family:var(--sans);font-weight:600;color:var(--navy);font-size:13px">HSA</div>
             <div style="font-family:var(--sans);font-size:16px;font-weight:700;color:var(--ink)">Health Savings Account</div>
           </div>
           <p class="muted tiny" style="line-height:1.55;margin:0">${rHSA.eligible
@@ -8276,7 +9102,7 @@ function renderTaxStrategy(root) {
         <div style="text-align:right;min-width:200px">
           ${rHSA.eligible ? `
             <div class="card-eyebrow">Tax saved on recommended</div>
-            <div style="font-family:var(--sans);font-size:22px;font-weight:800;color:var(--accent-2);font-variant-numeric:tabular-nums">${fmt.money(rHSA.savingsRecommended, {absolute:true})}</div>
+            <div style="font-family:var(--sans);font-size:22px;font-weight:600;color:var(--accent-2);font-variant-numeric:tabular-nums">${fmt.money(rHSA.savingsRecommended, {absolute:true})}</div>
             <div class="muted tiny">Contribute ${fmt.money(rHSA.recommended, {absolute:true})} more</div>
           ` : `
             <div class="card-eyebrow">Not eligible</div>
@@ -8339,7 +9165,7 @@ function renderTaxStrategy(root) {
       <div class="row" style="justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:14px">
         <div style="flex:1;min-width:280px">
           <div class="row" style="gap:10px;align-items:center;margin-bottom:6px">
-            <div style="width:32px;height:32px;border-radius:6px;background:var(--bg-alt);display:flex;align-items:center;justify-content:center;font-family:var(--sans);font-weight:800;color:var(--navy);font-size:13px">HI</div>
+            <div style="width:32px;height:32px;border-radius:6px;background:var(--bg-alt);display:flex;align-items:center;justify-content:center;font-family:var(--sans);font-weight:600;color:var(--navy);font-size:13px">HI</div>
             <div style="font-family:var(--sans);font-size:16px;font-weight:700;color:var(--ink)">S-corp Health Insurance (SEHI)</div>
           </div>
           <p class="muted tiny" style="line-height:1.55;margin:0">If your S-corp pays your health insurance, it must be added to W-2 Box 1 and then deducted on your personal 1040. Done correctly, the corp deducts the premium and you avoid FICA on it.</p>
@@ -8401,7 +9227,7 @@ function renderTaxStrategy(root) {
       <div class="row" style="justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:14px">
         <div style="flex:1;min-width:280px">
           <div class="row" style="gap:10px;align-items:center;margin-bottom:6px">
-            <div style="width:32px;height:32px;border-radius:6px;background:var(--bg-alt);display:flex;align-items:center;justify-content:center;font-family:var(--sans);font-weight:800;color:var(--navy);font-size:13px">W-2</div>
+            <div style="width:32px;height:32px;border-radius:6px;background:var(--bg-alt);display:flex;align-items:center;justify-content:center;font-family:var(--sans);font-weight:600;color:var(--navy);font-size:13px">W-2</div>
             <div style="font-family:var(--sans);font-size:16px;font-weight:700;color:var(--ink)">Reasonable Compensation Review</div>
           </div>
           <p class="muted tiny" style="line-height:1.55;margin:0">Salary of ${fmt.money(rComp.salary, {absolute:true})} is ${(rComp.salaryPct*100).toFixed(0)}% of S-corp net (${fmt.money(rComp.scorpNet, {absolute:true})}). For a non-producing manager role, this is <strong style="color:${rComp.risk.color}">${rComp.risk.label.toLowerCase()}</strong>.</p>
@@ -8547,12 +9373,12 @@ function openScenarioModal(baseInputs) {
             <div class="row" style="justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:14px">
               <div>
                 <div class="card-eyebrow">Scenario total tax</div>
-                <div style="font-family:var(--sans);font-size:26px;font-weight:800;color:var(--navy);letter-spacing:-0.01em;font-variant-numeric:tabular-nums">${fmt.money(sc.totalTax, {absolute:true})}</div>
+                <div style="font-family:var(--sans);font-size:26px;font-weight:600;color:var(--navy);letter-spacing:-0.01em;font-variant-numeric:tabular-nums">${fmt.money(sc.totalTax, {absolute:true})}</div>
                 <div class="muted tiny mt-2">Baseline: ${fmt.money(baseline.totalTax, {absolute:true})}</div>
               </div>
               <div style="text-align:right">
                 <div class="card-eyebrow">Delta</div>
-                <div style="font-family:var(--sans);font-size:22px;font-weight:800;color:${delta < 0 ? 'var(--accent-2)' : delta > 0 ? 'var(--danger)' : 'var(--ink-3)'};font-variant-numeric:tabular-nums">${delta === 0 ? '$0' : (delta < 0 ? '−' : '+') + fmt.money(Math.abs(delta), {absolute:true})}</div>
+                <div style="font-family:var(--sans);font-size:22px;font-weight:600;color:${delta < 0 ? 'var(--accent-2)' : delta > 0 ? 'var(--danger)' : 'var(--ink-3)'};font-variant-numeric:tabular-nums">${delta === 0 ? '$0' : (delta < 0 ? '−' : '+') + fmt.money(Math.abs(delta), {absolute:true})}</div>
                 <div class="muted tiny mt-2">${delta < 0 ? 'You save' : delta > 0 ? 'You pay more' : 'No change'}</div>
               </div>
             </div>
@@ -8589,8 +9415,8 @@ function openScenarioModal(baseInputs) {
               <tr style="border-top:2px solid var(--ink)">
                 <td style="padding:10px 0"><strong>Total tax burden</strong></td>
                 <td class="num" style="font-family:var(--mono);text-align:right;font-weight:700">${fmt.money(baseline.totalTax, {absolute:true})}</td>
-                <td class="num" style="font-family:var(--mono);text-align:right;font-weight:800">${fmt.money(sc.totalTax, {absolute:true})}</td>
-                <td class="num" style="font-family:var(--mono);text-align:right;font-weight:800;color:${delta < 0 ? 'var(--accent-2)' : delta > 0 ? 'var(--danger)' : 'var(--ink-3)'}">${delta === 0 ? '—' : (delta < 0 ? '−' : '+') + fmt.money(Math.abs(delta), {absolute:true})}</td>
+                <td class="num" style="font-family:var(--mono);text-align:right;font-weight:600">${fmt.money(sc.totalTax, {absolute:true})}</td>
+                <td class="num" style="font-family:var(--mono);text-align:right;font-weight:600;color:${delta < 0 ? 'var(--accent-2)' : delta > 0 ? 'var(--danger)' : 'var(--ink-3)'}">${delta === 0 ? '—' : (delta < 0 ? '−' : '+') + fmt.money(Math.abs(delta), {absolute:true})}</td>
               </tr>
             </tbody>
           </table>
@@ -9918,7 +10744,7 @@ const PayrollWizard = {
           <tbody>
             <tr><td style="padding:4px 0;color:var(--ink-2)">Gross pay</td><td class="num" style="font-family:var(--mono);text-align:right">${fmt.money(s.grossPerPeriod, {absolute:true})}</td></tr>
             <tr><td style="padding:4px 0;color:var(--ink-3)" class="tiny">Employee withholdings</td><td class="num" style="font-family:var(--mono);text-align:right;color:var(--ink-3)" class="tiny">(${fmt.money(s.employee.totalWithheld, {absolute:true})})</td></tr>
-            <tr style="border-top:1px solid var(--border)"><td style="padding:8px 0"><strong style="color:var(--accent-2)">→ Net to your personal account</strong></td><td class="num" style="font-family:var(--mono);text-align:right;font-weight:800;color:var(--accent-2);font-size:15px">${fmt.money(s.netPay, {absolute:true})}</td></tr>
+            <tr style="border-top:1px solid var(--border)"><td style="padding:8px 0"><strong style="color:var(--accent-2)">→ Net to your personal account</strong></td><td class="num" style="font-family:var(--mono);text-align:right;font-weight:600;color:var(--accent-2);font-size:15px">${fmt.money(s.netPay, {absolute:true})}</td></tr>
             <tr><td style="padding:6px 0"><strong style="color:var(--navy)">→ Federal deposit (EFTPS)</strong></td><td class="num" style="font-family:var(--mono);text-align:right;font-weight:700;color:var(--navy)">${fmt.money(s.deposits.federal, {absolute:true})}</td></tr>
             <tr><td style="padding:6px 0"><strong style="color:var(--navy)">→ California deposit (EDD)</strong></td><td class="num" style="font-family:var(--mono);text-align:right;font-weight:700;color:var(--navy)">${fmt.money(s.deposits.california, {absolute:true})}</td></tr>
           </tbody>
@@ -10028,7 +10854,7 @@ const PayrollWizard = {
                 <div style="width:22px;height:22px;border-radius:50%;background:${isDone ? 'var(--accent-2)' : 'var(--bg-alt)'};color:${isDone ? '#fff' : 'var(--ink-3)'};display:flex;align-items:center;justify-content:center;font-family:var(--sans);font-size:11px;font-weight:700">${isDone ? '✓' : ''}</div>
                 <div style="font-family:var(--sans);font-size:14px;font-weight:700;color:var(--ink)">${t.title}</div>
               </div>
-              <div style="font-family:var(--sans);font-size:24px;font-weight:800;color:var(--navy);letter-spacing:-0.01em;font-variant-numeric:tabular-nums;margin-top:8px">
+              <div style="font-family:var(--sans);font-size:24px;font-weight:600;color:var(--navy);letter-spacing:-0.01em;font-variant-numeric:tabular-nums;margin-top:8px">
                 ${fmt.money(t.amount, {absolute:true})}
                 <button class="btn btn-sm btn-ghost" data-copy-amount="${t.amount.toFixed(2)}" style="margin-left:8px;font-size:10.5px">Copy</button>
               </div>
@@ -10117,7 +10943,7 @@ const PayrollWizard = {
 
       <div style="background:var(--bg-alt);padding:18px 22px;border-radius:6px;margin-bottom:18px;border-left:3px solid var(--gold)">
         <div class="card-eyebrow">Amount transferred</div>
-        <div style="font-family:var(--sans);font-size:30px;font-weight:800;color:var(--navy);letter-spacing:-0.02em;font-variant-numeric:tabular-nums;margin-top:4px">
+        <div style="font-family:var(--sans);font-size:30px;font-weight:600;color:var(--navy);letter-spacing:-0.02em;font-variant-numeric:tabular-nums;margin-top:4px">
           ${fmt.money(t.amount, {absolute:true})}
         </div>
         <button class="btn btn-sm mt-12" data-copy-amount="${t.amount.toFixed(2)}">Copy amount</button>
@@ -10312,7 +11138,7 @@ function openDepositDialog(obligation) {
 
     <div style="background:var(--bg-alt);padding:18px 22px;border-radius:6px;margin-bottom:18px;border-left:3px solid var(--gold)">
       <div class="card-eyebrow">Deposit amount</div>
-      <div style="font-family:var(--sans);font-size:30px;font-weight:800;color:var(--navy);letter-spacing:-0.02em;font-variant-numeric:tabular-nums;margin-top:4px">
+      <div style="font-family:var(--sans);font-size:30px;font-weight:600;color:var(--navy);letter-spacing:-0.02em;font-variant-numeric:tabular-nums;margin-top:4px">
         ${fmt.money(obligation.amount, {absolute:true})}
       </div>
       <button class="btn btn-sm mt-12" id="copyAmountBtn">Copy amount to clipboard</button>
